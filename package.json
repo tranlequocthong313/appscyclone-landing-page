@@ -1,0 +1,29 @@
+{
+  "name": "appscyclone_landing_page",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "npx json-server --watch ./data/db.json --port 3000",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "autoprefixer": "^10.4.20",
+    "husky": "^9.1.7",
+    "json-server": "^1.0.0-beta.3",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.16",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^1.7.9",
+    "swiper": "^11.1.15"
+  }
+}

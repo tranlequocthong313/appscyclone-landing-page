@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/src/assets/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AppsCyclone Landing Page" />
+    <meta
+      name="keywords"
+      content="appscyclone, landing page, internship, frontend, technology"
+    />
+    <title>Apps Cyclone Technology JSC - Landing Page</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="box-border">
+    <!-- Navbar -->
+    <header
+      class="w-full fixed h-[72px] top-0 z-50 bg-white/70 px-4 md:px-40 pt-4 pb-2"
+    >
+      <nav class="flex justify-between items-center">
+        <!-- Logo -->
+        <img
+          src="/src/assets/images/logo.png"
+          class="h-8 w-auto cursor-pointer hidden md:block"
+          alt="Logo"
+        />
+        <img
+          src="/src/assets/images/favicon.png"
+          class="h-10 w-auto cursor-pointer block md:hidden"
+          alt="Small Logo"
+        />
+
+        <!-- Hamburger Menu -->
+        <button
+          id="menuToggle"
+          class="block md:hidden text-textPrimary focus:outline-none"
+        >
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Menu -->
+        <ul
+          id="menu"
+          class="hidden md:flex items-center gap-10 bg-white md:bg-transparent absolute md:static top-[72px] right-0 w-full md:w-auto md:gap-10 px-4 md:px-0 shadow md:shadow-none"
+        >
+          <li
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center md:text-start my-5 md:my-0"
+          >
+            Home
+          </li>
+          <li
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center md:text-start my-5 md:my-0"
+          >
+            Courses
+          </li>
+          <li class="my-5 md:my-0">
+            <button
+              class="font-bold rounded-[40px] py-3 px-6 bg-tertiaryBackground text-white h-12 hover:bg-primaryMain w-full md:w-auto"
+            >
+              Registered
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- First Introduction -->
+      <section class="flex items-center mt-[72px] relative md:h-[945px]">
+        <img
+          src="/src/assets/images/woman1.png"
+          alt="Woman"
+          class="animate-on-scroll hidden md:inline-block"
+          data-animation="fadeInLeft"
+        />
+        <div
+          class="w-full md:w-[543px] h-[358px] flex flex-col gap-20 mb-80 md:mb-40 mt-[90px] md:mt-0 px-2.5 md:px-0"
+        >
+          <div class="flex flex-col gap-3">
+            <h2
+              class="text-h2 font-bold text-textPrimary animate-on-scroll"
+              data-animation="fadeInUp"
+            >
+              Frontend Dev <span class="text-primaryMain">Training Center</span>
+            </h2>
+            <p
+              class="text-textSecondary font-bold w-full md:w-[426px] h-[56px] text-lg leading-7 animate-on-scroll animate__delay-1s"
+              data-animation="fadeInUp"
+            >
+              Teach from experience, learn from reality to create products of
+              high value
+            </p>
+          </div>
+          <button
+            class="rounded-[40px] py-4 px-6 bg-tertiaryBackground text-white font-bold md:w-48 hover:bg-primaryMain animate-on-scroll animate__delay-2s md:ml-0 w-full"
+            data-animation="fadeInUp"
+          >
+            Start learning
+          </button>
+        </div>
+        <img
+          src="/src/assets/images/corner-img.png"
+          alt="Corner Image"
+          class="absolute top-0 right-0 animate-on-scroll"
+          data-animation="fadeInRight"
+        />
+      </section>
+
+      <!-- Course coming soon -->
+      <section class="md:h-[900px] relative" id="course-coming-up">
+        <div
+          class="flex justify-between md:px-40 md:mb-20 flex-col md:flex-row px-2.5"
+        >
+          <h4
+            class="text-h3 text-[40px] font-bold animate-on-scroll md:px-0"
+            data-animation="fadeInDown"
+          >
+            Course Coming Soon
+          </h4>
+          <div class="flex gap-4 mt-6 md:mt-0 md:px-0 mb-5 md:mb-0">
+            <img
+              src="/src/assets/icons/arrow-left-2.png"
+              class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer animate-on-scroll swiper-button-prev"
+              data-animation="fadeIn"
+              alt="arrow left"
+            />
+            <img
+              src="/src/assets/icons/arrow-right-2.png"
+              class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer animate-on-scroll swiper-button-next"
+              data-animation="fadeIn"
+              alt="arrow right"
+            />
+          </div>
+        </div>
+        <div class="relative h-full">
+          <div
+            class="bg-secondaryBackground md:w-4/5 h-[539px] md:absolute md:right-0 md:bottom-0 md:top-0 flex items-center animate-on-scroll w-full"
+            data-animation="fadeInUp"
+            id="course-coming-up__container"
+          >
+            <div
+              class="flex items-center justify-center relative w-full px-2.5"
+            >
+              <img
+                src="src/assets/images/react.png"
+                class="w-[427px] h-[427px] relative -left-24 animate-on-scroll hidden md:block"
+                data-animation="zoomIn"
+                alt="react"
+              />
+              <div
+                class="flex flex-col w-full gap-20 animate__animated animate__fadeInUp animate__delay-1s"
+              >
+                <div class="flex flex-col gap-10">
+                  <div class="flex flex-col gap-4">
+                    <div class="gap-1 flex flex-col">
+                      <p class="text-textSecondary">FRONTEND</p>
+                      <h5 class="text-h4 font-medium">ReactJS</h5>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <img src="src/assets/images/avatar2.png" alt="avatar" />
+                      <p class="text-textSecondary">Jane Cooper</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-14">
+                    <div class="flex flex-col gap-4">
+                      <p class="text-textSecondary">Opening day</p>
+                      <h5 class="text-h5 font-bold">28/02/2023</h5>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                      <p class="text-textSecondary">Learning form</p>
+                      <h5 class="text-h5 font-bold">Offline</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex gap-4 flex-col md:flex-row">
+                  <button
+                    class="bg-tertiaryBackground text-white rounded-[40px] py-4 px-10 font-bold hover:bg-primaryMain animate__animated animate__fadeInUp animate__delay-2s transition-transform duration-300 ease-in-out"
+                  >
+                    Register for school
+                  </button>
+                  <button
+                    class="bg-transparent text-textPrimary rounded-[40px] py-4 px-6 w-full md:w-[220px] border border-tertiaryBackground font-bold hover:border-primaryMain hover:text-primaryMain animate__animated animate__fadeInUp animate__delay-2s transition-transform duration-300 ease-in-out"
+                  >
+                    See details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- All Courses -->
+      <section class="md:px-40 md:h-[2000px]">
+        <div
+          class="bg-secondaryBackground px-3 flex flex-col flex-wrap md:h-[1942px] items-center justify-center gap-12 relative"
+        >
+          <div class="flex flex-col gap-6 mt-28 md:mt-0 w-full md:w-[543px]">
+            <h4
+              class="text-h3 m font-bold text-textPrimary animate-on-scroll"
+              data-animation="fadeIn"
+            >
+              All Courses
+            </h4>
+            <p
+              class="text-textSecondary text-lg leading-7 animate-on-scroll"
+              data-animation="fadeIn"
+            >
+              Including courses on design and frontend such as: Frontend Newbie,
+              Frontend Master, Web Responsive, React JS Master, Graphic
+              Design,...
+            </p>
+          </div>
+
+          <div
+            class="relative animate-on-scroll hover:!scale-105 cursor-pointer"
+            data-animation="fadeIn"
+          >
+            <img src="src/assets/images/reactimage.png" alt="react" />
+            <div
+              class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
+            >
+              Offline
+            </div>
+            <div class="p-10 flex flex-col gap-4">
+              <div class="flex flex-col gap-2">
+                <p class="text-sm leading-6 text-textSecondary">FRONTEND</p>
+                <h5 class="text-textPrimary text-2xl leading-9 font-bold">
+                  ReactJS
+                </h5>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img src="src/assets/images/avatar3.png" alt="avatar" />
+                  <span>Jane Cooper</span>
+                </div>
+                <span class="text-textPrimary font-bold text-xl"
+                  >4.500.000đ</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative animate-on-scroll hover:!scale-105 cursor-pointer"
+            data-animation="fadeIn"
+          >
+            <img src="src/assets/images/flutterimage.png" alt="flutter" />
+            <div
+              class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
+            >
+              Offline
+            </div>
+            <div class="p-10 flex flex-col gap-4">
+              <div class="flex flex-col gap-2">
+                <p class="text-sm leading-6 text-textSecondary">Mobile</p>
+                <h5 class="text-textPrimary text-2xl leading-9 font-bold">
+                  Frontend Master
+                </h5>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img src="src/assets/images/avatar3.png" alt="avatar" />
+                  <span>Jane Cooper</span>
+                </div>
+                <span class="text-textPrimary font-bold text-xl"
+                  >4.500.000đ</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative animate-on-scroll hover:!scale-105 cursor-pointer"
+            data-animation="fadeIn"
+          >
+            <img src="src/assets/images/unityimage.png" alt="unity" />
+            <div
+              class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
+            >
+              Offline
+            </div>
+            <div class="p-10 flex flex-col gap-4">
+              <div class="flex flex-col gap-2">
+                <p class="text-sm leading-6 text-textSecondary">GAME</p>
+                <h5 class="text-textPrimary text-2xl leading-9 font-bold">
+                  Unity
+                </h5>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img src="src/assets/images/avatar4.png" alt="avatar" />
+                  <span>Jane Cooper</span>
+                </div>
+                <span class="text-textPrimary font-bold text-xl"
+                  >4.500.000đ</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="relative animate-on-scroll hover:!scale-105 cursor-pointer"
+            data-animation="fadeIn"
+          >
+            <img src="src/assets/images/nodeimage.png" alt="node" />
+            <div
+              class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
+            >
+              Offline
+            </div>
+            <div class="p-10 flex flex-col gap-4">
+              <div class="flex flex-col gap-2">
+                <p class="text-sm leading-6 text-textSecondary">BACKEND</p>
+                <h5 class="text-textPrimary text-2xl leading-9 font-bold">
+                  NodeJS
+                </h5>
+              </div>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <img src="src/assets/images/avatar3.png" alt="avatar" />
+                  <span>Jane Cooper</span>
+                </div>
+                <span class="text-textPrimary font-bold text-xl"
+                  >4.500.000đ</span
+                >
+              </div>
+            </div>
+          </div>
+          <button
+            class="hover:border-primaryMain border border-tertiaryBackground text-textPrimary rounded-[40px] p-4 md:w-[193px] h-[56px] flex items-center justify-center md:ml-auto md:mr-28 hover:scale-105 transition-transform duration-300 w-full"
+          >
+            View all
+            <img src="/src/assets/icons/arrow-right-2.png" alt="arrow right" />
+          </button>
+        </div>
+      </section>
+
+      <!-- Team -->
+      <section
+        class="md:px-40 px-2.5 md:h-[926px] flex flex-col justify-center"
+      >
+        <div class="flex justify-between flex-col md:flex-row">
+          <div class="md:w-[660px] flex flex-col gap-6">
+            <h4
+              class="text-h4 font-bold animate-on-scroll mt-40 md:mt-0"
+              data-animation="fadeIn"
+            >
+              Appscyclone <span class="text-primaryMain">Team</span>
+            </h4>
+            <p
+              class="text-textSecondary text-lg animate-on-scroll"
+              data-animation="fadeIn"
+            >
+              A team of enthusiastic instructors and mentors with a lot of
+              experience accumulated from practical projects will accompany you
+              throughout your learning process and career development path.
+            </p>
+          </div>
+          <div class="flex gap-4 mt-5 md:mt-0">
+            <img
+              src="/src/assets/icons/arrow-left-2.png"
+              class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer animate-on-scroll"
+              data-animation="fadeIn"
+              alt="arrow left"
+            />
+            <img
+              src="/src/assets/icons/arrow-right-2.png"
+              class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer animate-on-scroll"
+              data-animation="fadeIn"
+              alt="arrow right"
+            />
+          </div>
+        </div>
+        <ul
+          class="flex flex-col md:flex-row gap-10 justify-between items-center mt-20 animate-on-scroll"
+          data-animation="fadeIn"
+        >
+          <li class="relative hover:scale-105 cursor-pointer">
+            <div
+              class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-0 right-0"
+            ></div>
+            <img src="src/assets/images/ceo1.png" alt="ceo" />
+            <div
+              class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20"
+            >
+              <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+              <span class="text-textPrimary">CEO</span>
+            </div>
+          </li>
+          <li class="relative hover:scale-105 cursor-pointer">
+            <div
+              class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-0 right-0"
+            ></div>
+            <img src="src/assets/images/ceo2.png" alt="ceo" />
+            <div
+              class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20"
+            >
+              <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+              <span class="text-textPrimary">CEO</span>
+            </div>
+          </li>
+          <li class="relative hover:scale-105 cursor-pointer">
+            <div
+              class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-0 right-0"
+            ></div>
+            <img src="src/assets/images/ceo3.png" alt="ceo" />
+            <div
+              class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20"
+            >
+              <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+              <span class="text-textPrimary">CEO</span>
+            </div>
+          </li>
+          <li class="relative hover:scale-105 cursor-pointer">
+            <div
+              class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-0 right-0"
+            ></div>
+            <img src="src/assets/images/ceo4.png" alt="ceo" />
+            <div
+              class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20"
+            >
+              <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+              <span class="text-textPrimary">CEO</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Special Value -->
+      <section
+        class="md:px-40 px-2.5 flex flex-col md:flex-row bg-secondaryBackground relative md:h-[896px] pt-40"
+      >
+        <div class="flex-1">
+          <h4
+            class="text-h4 md:text-[40px] leading-[56px] font-bold text-primaryMain md:w-[410px] h-28 animate-on-scroll mb-5 md:mb-0"
+            data-animation="fadeIn"
+          >
+            Special Value <span class="text-textPrimary">from Appscyclone</span>
+          </h4>
+          <img
+            src="src/assets/images/corner2.png"
+            class="absolute left-0 bottom-0 animate-on-scroll"
+            data-animation="fadeInLeft"
+            alt="corner"
+          />
+        </div>
+        <ul
+          class="flex-1 flex gap-10 flex-col animate-on-scroll mt-8 mb-32"
+          data-animation="fadeIn"
+        >
+          <li class="gap-4 flex flex-col">
+            <h4 class="text-h4 font-medium">Real-life training program</h4>
+            <p class="text-textSecondary text-lg">
+              The learning curve at Appscycloneis straight to the point, close
+              to the actual requirements, communicated from experienced and
+              dedicated instructors.
+            </p>
+          </li>
+          <li class="gap-4 flex flex-col">
+            <h4 class="text-h4 font-medium">Companion and support 24/7</h4>
+            <p class="text-textSecondary text-lg">
+              Instructors, mentors and students are a cohesive team, together
+              supporting, connecting and helping each other throughout the
+              learning and career development process.
+            </p>
+          </li>
+          <li class="gap-4 flex flex-col">
+            <h4 class="text-h4 font-medium">
+              Put the word "Mind" in everything
+            </h4>
+            <p class="text-textSecondary text-lg">
+              The mind of the teacher, together with the enthusiasm of the
+              learners, will be successful on the career path of each of us.
+            </p>
+          </li>
+          <li class="gap-4 flex flex-col">
+            <h4 class="text-h4 font-medium">Various forms of learning</h4>
+            <p class="text-textSecondary text-lg">
+              Study offline or online with offline through google meet, as well
+              as live & video courses with instructors, and mentor-supported
+              video lessons.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Evaluation -->
+      <section
+        class="flex flex-col md:flex-row md:px-40 gap-10 md:h-[706px] items-center px-2.5"
+      >
+        <div class="flex-1 flex-col flex gap-3 md:gap-36">
+          <h4
+            class="text-h3 font-bold text-textPrimary md:w-[221px] mt-40 md:mt-10 animate-on-scroll"
+            data-animation="fadeIn"
+          >
+            Student Evaluations
+          </h4>
+          <div class="flex gap-4 animate-on-scroll" data-animation="fadeIn">
+            <img
+              src="/src/assets/icons/arrow-left-2.png"
+              class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer"
+              alt="arrow left"
+            />
+            <img
+              src="/src/assets/icons/arrow-right-2.png"
+              class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer"
+              alt="arrow right"
+            />
+          </div>
+        </div>
+        <div
+          class="flex-1 p-8 border border-gray-4 max-w-[426px] h-[426px] animate-on-scroll hover:scale-105 cursor-pointer"
+          data-animation="fadeIn"
+        >
+          <img
+            src="src/assets/images/quote.png"
+            class="w-8 h-6 mb-10 -scale-x-100"
+            alt="quote"
+          />
+          <p class="text-textSecondary text-lg mb-14">
+            Mentors teach with heart and <br />
+            enthusiasm. I am a person who does not know html and css, after the
+            course, I can confidently code the interface according to the design
+            and also handle events with javascript and jquery.
+          </p>
+          <div class="flex items-center gap-2">
+            <img
+              src="src/assets/images/avatar.png"
+              alt="avatar"
+              class="rounded-full"
+            />
+            <div class="flex flex-col gap-1">
+              <h6 class="text-lg font-bold">Jane Cooper</h6>
+              <p class="text-textSecondary">Student CFD1</p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="src/assets/images/playing-team.png"
+          class="animate-on-scroll hover:scale-105 cursor-pointer"
+          data-animation="fadeIn"
+          alt="playing team"
+        />
+      </section>
+
+      <img
+        src="/src/assets/images/Vector.png"
+        class="-z-10 absolute left-0 animate-on-scroll"
+        data-animation="fadeInLeft"
+        alt="corner"
+      />
+
+      <!-- FAQ -->
+      <section
+        class="flex flex-col md:flex-row md:px-40 px-2.5 md:h-[872px] justify-between animate-on-scroll"
+        data-animation="fadeIn"
+      >
+        <h4
+          class="text-h3 text-[38px] font-bold md:w-[460px] mt-40 mb-20 md:mb-0 md:mt-0"
+        >
+          Frequently Asked Questions
+        </h4>
+        <ul>
+          <li
+            class="py-8 px-10 bg-secondaryBackground flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer hover:opacity-80"
+          >
+            <div class="flex justify-between">
+              <span class="text-textPrimary font-bold text-lg">
+                Add commonly asked questions here
+              </span>
+              <img
+                src="/src/assets/icons/arrow-up.png"
+                class="hidden md:block"
+                alt="arrow up"
+              />
+            </div>
+            <p class="text-textSecondary text-lg pr-10 md:w-[697px]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+              uto lectus molestie malesuada vitae vel purus.
+            </p>
+          </li>
+          <li
+            class="py-8 px-10 flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer"
+          >
+            <div class="flex justify-between">
+              <span
+                class="text-textPrimary font-bold text-lg hover:text-primaryMain"
+              >
+                Add commonly asked questions here
+              </span>
+              <img
+                src="/src/assets/icons/arrow-down.png"
+                class="hidden md:block"
+                alt="arrow down"
+              />
+            </div>
+          </li>
+          <li
+            class="py-8 px-10 flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer"
+          >
+            <div class="flex justify-between">
+              <span
+                class="text-textPrimary font-bold text-lg hover:text-primaryMain"
+              >
+                Add commonly asked questions here
+              </span>
+              <img
+                src="/src/assets/icons/arrow-down.png"
+                class="hidden md:block"
+                alt="arrow down"
+              />
+            </div>
+          </li>
+          <li
+            class="py-8 px-10 flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer"
+          >
+            <div class="flex justify-between">
+              <span
+                class="text-textPrimary font-bold text-lg hover:text-primaryMain"
+              >
+                Add commonly asked questions here
+              </span>
+              <img
+                src="/src/assets/icons/arrow-down.png"
+                class="hidden md:block"
+                alt="arrow down"
+              />
+            </div>
+          </li>
+          <li
+            class="py-8 px-10 flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer"
+          >
+            <div class="flex justify-between">
+              <span
+                class="text-textPrimary font-bold text-lg hover:text-primaryMain"
+              >
+                Add commonly asked questions here
+              </span>
+              <img
+                src="/src/assets/icons/arrow-down.png"
+                class="hidden md:block"
+                alt="arrow down"
+              />
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <img
+        src="/src/assets/images/Vector2.png"
+        class="absolute right-0 -z-10"
+        alt="corner"
+      />
+
+      <!-- Team Photo -->
+      <section class="flex justify-center items-center flex-col">
+        <div
+          class="flex flex-col gap-4 text-center animate-on-scroll mt-40"
+          data-animation="fadeInUp"
+        >
+          <h4 class="text-textPrimary text-h4 md:text-h3 font-bold">
+            Appscyclone is a team
+          </h4>
+          <p class="text-textSecondary text-lg">
+            Everyone for one, one for all
+          </p>
+        </div>
+        <img
+          src="/src/assets/images/team-photo-lg.png"
+          class="animate-on-scroll"
+          data-animation="fadeIn"
+          alt="team photo"
+        />
+      </section>
+
+      <!-- Joining Section -->
+      <section
+        class="bg-tertiaryBackground md:h-[552px] flex items-center justify-center flex-col gap-20 py-40"
+      >
+        <div
+          class="flex flex-col gap-6 justify-center items-center md:w-[820px] animate-on-scroll"
+          data-animation="fadeIn"
+        >
+          <h4
+            class="text-h4 md:text-h3 md:text-[40px] text-white font-bold mb-3 text-center"
+          >
+            Become a Part of Appscyclone
+          </h4>
+          <p class="text-textTertiary text-lg text-center">
+            We are very happy that you decided to become a part of Appscyclone
+            to learn, spread and share valuable experiences to the community.
+          </p>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-4 animate-on-scroll"
+          data-animation="fadeInUp"
+        >
+          <button
+            class="bg-white text-textPrimary rounded-[40px] py-4 px-10 font-bold hover:bg-primaryMain hover:text-white"
+          >
+            Join the Course
+          </button>
+          <button
+            class="bg-transparent text-white rounded-[40px] py-4 px-10 border font-bold hover:border-primaryMain hover:text-primaryMain"
+          >
+            Teaching / Partner
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="md:h-[534px] md:px-40 px-2.5 flex flex-col relative pt-20 pb-10 md:pb-0"
+    >
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div
+          class="md:w-[427px] flex flex-col gap-8 items-center md:items-start"
+        >
+          <img src="/src/assets/images/logo.png" alt="logo" />
+          <h2
+            class="text-[32px] leading-[44.8px] font-medium text-center md:text-start"
+          >
+            Wanna learn with us? <br />
+            Get in touch
+          </h2>
+          <button
+            class="rounded-[40px] p-4 bg-tertiaryBackground text-white w-[199px] hover:bg-primaryMain mb-8 md:mb-0"
+          >
+            Registered
+          </button>
+        </div>
+        <div
+          class="flex flex-col md:flex-row text-center md:text-start justify-between gap-10 md:w-[543px]"
+        >
+          <ul class="flex-1 flex flex-col gap-4">
+            <li class="font-bold text-textPrimary text-lg">Navigation</li>
+            <li
+              class="text-textSecondary hover:text-primaryMain cursor-pointer"
+            >
+              Home
+            </li>
+            <li
+              class="text-textSecondary hover:text-primaryMain cursor-pointer"
+            >
+              Course
+            </li>
+          </ul>
+          <ul class="flex-1 flex flex-col gap-4">
+            <li class="font-bold text-textPrimary text-lg">Head Office</li>
+            <li
+              class="text-textSecondary hover:text-primaryMain cursor-pointer"
+            >
+              168/6 Bui Thi Xuan Street, <br />
+              Ward 3, Tan Binh District, <br />
+              Ho Chi Minh City, Vietnam
+            </li>
+            <li class="flex gap-6 justify-center md:justify-start">
+              <img
+                src="/src/assets/images/Twitter.png"
+                alt="Twitter"
+                class="cursor-pointer hover:scale-105"
+              />
+              <img
+                src="/src/assets/images/Whatsapp.png"
+                alt="Whatsapp"
+                class="cursor-pointer hover:scale-105"
+              />
+              <img
+                src="/src/assets/images/Facebook.png"
+                alt="Facebook"
+                class="cursor-pointer hover:scale-105"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p
+        class="text-textSecondary text-center md:text-start md:absolute md:bottom-10 mt-5 md:mt-0"
+      >
+        Copyright © 2023. All rights reserved.
+      </p>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
