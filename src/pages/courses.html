@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/src/assets/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AppsCyclone Landing Page" />
+    <meta
+      name="keywords"
+      content="appscyclone, landing page, internship, frontend, technology"
+    />
+    <title>Apps Cyclone Technology JSC - Landing Page</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="box-border">
+    <!-- Navbar -->
+    <header
+      class="w-full fixed h-[72px] top-0 z-50 bg-white/70 px-4 md:px-40 pt-4 pb-2"
+    >
+      <nav class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="/" class="no-underline">
+          <img
+            src="/src/assets/images/logo.png"
+            class="h-8 w-auto cursor-pointer hidden md:block"
+            alt="Logo"
+          />
+        </a>
+        <a href="/" class="no-underline">
+          <img
+            src="/src/assets/images/favicon.png"
+            class="h-10 w-auto cursor-pointer block md:hidden"
+            alt="Small Logo"
+          />
+        </a>
+
+        <!-- Hamburger Menu -->
+        <button
+          id="menuToggle"
+          class="block md:hidden text-textPrimary focus:outline-none"
+        >
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Menu -->
+        <ul
+          id="menu"
+          class="hidden md:flex items-center gap-10 bg-white md:bg-transparent absolute md:static top-[72px] right-0 w-full md:w-auto md:gap-10 px-4 md:px-0 shadow md:shadow-none"
+        >
+          <li
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center md:text-start my-5 md:my-0"
+          >
+            <a href="/" class="no-underline"> Home </a>
+          </li>
+          <li
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center md:text-start my-5 md:my-0"
+          >
+            <a href="/src/pages/courses.html" class="no-underline"> Courses </a>
+          </li>
+          <li class="my-5 md:my-0">
+            <button
+              class="font-bold rounded-[40px] py-3 px-6 bg-tertiaryBackground text-white h-12 hover:bg-primaryMain w-full md:w-auto"
+            >
+              Registered
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="mt-[72px] md:px-40 animate__animated animate__fadeIn">
+      <!-- Course Filter -->
+      <section class="mb-10">
+        <h3 class="text-h3 text-[40px] mb-10 font-bold">All Courses</h3>
+        <ul
+          class="bg-secondaryBackground text-textPrimary flex flex-wrap p-0.5 text-center h-11 font-bold items-center md:w-[1147px]"
+        >
+          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
+            <a href="/src/pages/courses.html">All</a>
+          </li>
+          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
+            <a href="?type=FRONTEND">Frontend</a>
+          </li>
+          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
+            <a href="?type=Design">Design</a>
+          </li>
+          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
+            <a href="?type=BACKEND">Backend</a>
+          </li>
+          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
+            <a href="?type=Mobile">Mobile</a>
+          </li>
+          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
+            <a href="?type=QC">QC</a>
+          </li>
+          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
+            <a href="?type=GAME">Game</a>
+          </li>
+          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
+            <a href="?type=Blockchain">Blockchain</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Course List -->
+      <section class="mb-10">
+        <ul class="flex flex-wrap gap-28 items-center" id="courses"></ul>
+      </section>
+
+      <!-- Course Pagination -->
+      <section class="flex items-center gap-4 float-end">
+        <span class="text-regular text-[14px] text-textPrimary"
+          >Total <span id="total-items">0</span> items</span
+        >
+        <ul class="flex gap-2 items-center pagination-list">
+          <li
+            class="bg-secondaryBackground w-10 h-10 flex items-center justify-center"
+          >
+            <img src="/src/assets/icons/arrow-left-back.png" alt="arrow left" />
+          </li>
+          <li
+            class="bg-primaryMain text-white w-10 h-10 text-center leading-10"
+          >
+            1
+          </li>
+          <li
+            class="bg-secondaryBackground text-textPrimary w-10 h-10 text-center leading-10"
+          >
+            2
+          </li>
+          <li
+            class="bg-secondaryBackground text-textPrimary w-10 h-10 text-center leading-10"
+          >
+            3
+          </li>
+          <li
+            class="bg-secondaryBackground text-textPrimary w-10 h-10 text-center leading-10"
+          >
+            ...
+          </li>
+          <li
+            class="bg-secondaryBackground text-textPrimary w-10 h-10 text-center leading-10"
+          >
+            6
+          </li>
+          <li
+            class="bg-secondaryBackground w-10 h-10 flex items-center justify-center"
+          >
+            <img src="/src/assets/icons/arrow-right.png" alt="arrow right" />
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="md:h-[534px] md:px-40 px-2.5 flex flex-col relative pt-20 pb-10 md:pb-0"
+    >
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div
+          class="md:w-[427px] flex flex-col gap-8 items-center md:items-start"
+        >
+          <img src="/src/assets/images/logo.png" alt="logo" />
+          <h2
+            class="text-[32px] leading-[44.8px] font-medium text-center md:text-start"
+          >
+            Wanna learn with us? <br />
+            Get in touch
+          </h2>
+          <button
+            class="rounded-[40px] p-4 bg-tertiaryBackground text-white w-[199px] hover:bg-primaryMain mb-8 md:mb-0"
+          >
+            Registered
+          </button>
+        </div>
+        <div
+          class="flex flex-col md:flex-row text-center md:text-start justify-between gap-10 md:w-[543px]"
+        >
+          <ul class="flex-1 flex flex-col gap-4">
+            <li class="font-bold text-textPrimary text-lg">Navigation</li>
+            <li
+              class="text-textSecondary hover:text-primaryMain cursor-pointer"
+            >
+              <a href="/" class="no-underline"> Home </a>
+            </li>
+            <li
+              class="text-textSecondary hover:text-primaryMain cursor-pointer"
+            >
+              <a href="/src/pages/courses.html" class="no-underline">
+                Course
+              </a>
+            </li>
+          </ul>
+          <ul class="flex-1 flex flex-col gap-4">
+            <li class="font-bold text-textPrimary text-lg">Head Office</li>
+            <li
+              class="text-textSecondary hover:text-primaryMain cursor-pointer"
+            >
+              168/6 Bui Thi Xuan Street, <br />
+              Ward 3, Tan Binh District, <br />
+              Ho Chi Minh City, Vietnam
+            </li>
+            <li class="flex gap-6 justify-center md:justify-start">
+              <img
+                src="/src/assets/images/Twitter.png"
+                alt="Twitter"
+                class="cursor-pointer hover:scale-105"
+              />
+              <img
+                src="/src/assets/images/Whatsapp.png"
+                alt="Whatsapp"
+                class="cursor-pointer hover:scale-105"
+              />
+              <img
+                src="/src/assets/images/Facebook.png"
+                alt="Facebook"
+                class="cursor-pointer hover:scale-105"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p
+        class="text-textSecondary text-center md:text-start md:absolute md:bottom-10 mt-5 md:mt-0"
+      >
+        Copyright © 2023. All rights reserved.
+      </p>
+    </footer>
+
+    <script type="module" src="/src/courses.ts"></script>
+  </body>
+</html>

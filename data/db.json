@@ -1,0 +1,1785 @@
+{
+    "evaluations": [
+        {
+            "id": 1,
+            "content": "Mentors teach with heart and enthusiasm. I am a person who does not know html and css, after the course, I can confidently code the interface according to the design and also handle events with javascript and jquery.",
+            "author": {
+                "name": "Jane Cooper",
+                "avatar": "/src/assets/images/avatar.png",
+                "badge": "Student CFD1"
+            }
+        },
+        {
+            "id": 2,
+            "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+            "author": {
+                "name": "Alice Smith",
+                "avatar": "/src/assets/images/avatar.png",
+                "badge": "Student FCD2"
+            }
+        },
+        {
+            "id": 3,
+            "content": "Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+            "author": {
+                "name": "John Doe",
+                "avatar": "/src/assets/images/avatar.png",
+                "badge": "Student OASF"
+            }
+        }
+    ],
+    "courses": [
+        {
+            "id": 1,
+            "image": "/src/assets/images/reactimage.png",
+            "name": "ReactJS",
+            "type": "FRONTEND",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn ReactJS from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "React Components",
+                    "lessonContent": [
+                        "Class Components",
+                        "Functional Components",
+                        "JSX Syntax"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 2,
+            "image": "/src/assets/images/flutterimage.png",
+            "name": "Flutter",
+            "type": "Mobile",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn Flutter from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 3,
+            "image": "/src/assets/images/unityimage.png",
+            "name": "Unity",
+            "type": "GAME",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar4.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn Flutter from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 4,
+            "image": "/src/assets/images/nodeimage.png",
+            "name": "NodeJS",
+            "type": "BACKEND",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn Flutter from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 5,
+            "image": "/src/assets/images/qcimage.png",
+            "name": "QC",
+            "type": "QC",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn QC from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 6,
+            "image": "/src/assets/images/iotimage.png",
+            "name": "IOT",
+            "type": "IOT",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn IOT from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 7,
+            "image": "/src/assets/images/blockchainimage.png",
+            "name": "Blockchain",
+            "type": "Blockchain",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn IOT from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 7,
+            "image": "/src/assets/images/phpimage.png",
+            "name": "BACKEND",
+            "type": "PHP",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn IOT from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 8,
+            "image": "/src/assets/images/reactimage.png",
+            "name": "ReactJS",
+            "type": "FRONTEND",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn ReactJS from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "React Components",
+                    "lessonContent": [
+                        "Class Components",
+                        "Functional Components",
+                        "JSX Syntax"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 9,
+            "image": "/src/assets/images/flutterimage.png",
+            "name": "Flutter",
+            "type": "Mobile",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn Flutter from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 10,
+            "image": "/src/assets/images/unityimage.png",
+            "name": "Unity",
+            "type": "GAME",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar4.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn Flutter from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 11,
+            "image": "/src/assets/images/nodeimage.png",
+            "name": "NodeJS",
+            "type": "BACKEND",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn Flutter from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 12,
+            "image": "/src/assets/images/qcimage.png",
+            "name": "QC",
+            "type": "QC",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn QC from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 13,
+            "image": "/src/assets/images/iotimage.png",
+            "name": "IOT",
+            "type": "IOT",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn IOT from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 14,
+            "image": "/src/assets/images/blockchainimage.png",
+            "name": "Blockchain",
+            "type": "Blockchain",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn IOT from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 15,
+            "image": "/src/assets/images/phpimage.png",
+            "name": "BACKEND",
+            "type": "PHP",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn IOT from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 16,
+            "image": "/src/assets/images/reactimage.png",
+            "name": "ReactJS",
+            "type": "FRONTEND",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn ReactJS from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "React Components",
+                    "lessonContent": [
+                        "Class Components",
+                        "Functional Components",
+                        "JSX Syntax"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 17,
+            "image": "/src/assets/images/flutterimage.png",
+            "name": "Flutter",
+            "type": "Mobile",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn Flutter from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 18,
+            "image": "/src/assets/images/unityimage.png",
+            "name": "Unity",
+            "type": "GAME",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar4.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn Flutter from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 19,
+            "image": "/src/assets/images/nodeimage.png",
+            "name": "NodeJS",
+            "type": "BACKEND",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn Flutter from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 20,
+            "image": "/src/assets/images/qcimage.png",
+            "name": "QC",
+            "type": "QC",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn QC from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 21,
+            "image": "/src/assets/images/iotimage.png",
+            "name": "IOT",
+            "type": "IOT",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn IOT from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 22,
+            "image": "/src/assets/images/blockchainimage.png",
+            "name": "Blockchain",
+            "type": "Blockchain",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn IOT from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        },
+        {
+            "id": 23,
+            "image": "/src/assets/images/phpimage.png",
+            "name": "BACKEND",
+            "type": "PHP",
+            "lecturers": [
+                {
+                    "name": "Jane Cooper",
+                    "avatar": "/src/assets/images/avatar3.png",
+                    "isTeacher": true
+                },
+                {
+                    "name": "John Doe",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                },
+                {
+                    "name": "Alice Smith",
+                    "avatar": "https://via.placeholder.com/100",
+                    "isTeacher": false
+                }
+            ],
+            "learningForm": "offline",
+            "price": "4.500.000",
+            "timeLimit": "45 spells",
+            "introduction": "<p>Learn IOT from beginner to master level with real-world projects!</p>",
+            "schedule": {
+                "openingDay": "10/01/2024",
+                "time": "18:00 - 20:00",
+                "schoolDay": [
+                    {
+                        "name": "Sessions 1-12",
+                        "days": [
+                            "Tuesday",
+                            "Saturday"
+                        ]
+                    },
+                    {
+                        "name": "Sessions 13-48",
+                        "days": [
+                            "Mondays",
+                            "Fridays",
+                            "Fridays"
+                        ]
+                    }
+                ],
+                "address": "168/6 Bui Thi Xuan Street, Ward 3, Tan Binh District, Ho Chi Minh City, Vietnam"
+            },
+            "content": [
+                {
+                    "lessonName": "Overview, HTML, Photoshop, Chrome Dev Tool",
+                    "lessonContent": [
+                        "HTML knowledge. Write SEO-standard HTML Photoshop Chrome Dev Tools",
+                        "Photoshop",
+                        "Chrome Dev Tools"
+                    ]
+                },
+                {
+                    "lessonName": "Flutter Basics",
+                    "lessonContent": [
+                        "Dart Syntax",
+                        "OOP Programming",
+                        "UI Compoents"
+                    ]
+                }
+            ],
+            "requirements": [
+                "Have a personal laptop, install Photoshop, VSCode software",
+                "Minimize school breaks and complete assigned assignments",
+                "Learned about the frontend learning route and basic knowledge of HTML and CSS is an advantage",
+                "Appscyclone members must have a high sense of responsibility and initiative in learning, as well as self-study and part-time work at home"
+            ]
+        }
+    ]
+}
