@@ -35,3 +35,15 @@ export interface Content {
     lessonName: string
     lessonContent: string[]
 }
+
+export interface Evaluation {
+    id: string
+    content: string
+    author: Author
+}
+
+export interface Author {
+    name: string
+    avatar: string
+    badge: string
+}
