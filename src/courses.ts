@@ -3,11 +3,13 @@ import 'animate.css'
 import http, { API_ENDPOINTS } from './api'
 import { Course } from './type'
 
+const DEFAULT_PAGE = 1
+const DEFAULT_LIMIT = 9
 
 const courseList = document.querySelector("#courses")!
 const filterItems = document.querySelectorAll(".filter-item")!
-const totalItem = document.querySelectorAll("#total-items")!
-const paginationList = document.querySelectorAll("#pagination-list")!
+const totalItem = document.querySelector("#total-items")!
+const paginationList = document.querySelector("#pagination-list")!
 
 
 // Handle Navbar Menu On Small Screen Device
@@ -30,23 +32,117 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 
-// Handle Coming Course & All Courses Section
+// Handle Courses and Pagination Section
 document.addEventListener("DOMContentLoaded", async () => {
-  const courses = await fetchCourses()
-  renderCourses(courses)
+  const { data: courses, total = 0 } = await fetchCourses()
+  if (courses) {
+    renderCourses(courses)
+  }
+  totalItem.innerHTML += total
+  renderPagination(Math.ceil(total / DEFAULT_LIMIT))
 })
+
+function renderPagination(size: number, maxVisiblePages: number = 6) {
+  const query = new URLSearchParams(window.location.search)
+  const currentPage = parseInt(query.get("page") || String(DEFAULT_PAGE))
+
+  paginationList.innerHTML += `
+    <li
+      class="bg-secondaryBackground w-10 h-10 flex items-center justify-center ${currentPage === 1 ? "opacity-50 pointer-events-none" : ""
+    }"
+    >
+      <a class="flex items-center justify-center w-full h-full hover:bg-primaryMain" href="?page=${currentPage - 1}">
+        <img src="/src/assets/icons/arrow-left-back.png" alt="arrow left" />
+      </a>
+    </li>
+  `
+
+  const pages: (number | string)[] = []
+
+  if (size <= maxVisiblePages) {
+    for (let i = 1; i <= size; i++) {
+      pages.push(i)
+    }
+  } else {
+    pages.push(1)
+    const halfRange = Math.floor(maxVisiblePages / 2)
+    const isOnHalf = currentPage > (halfRange + 2)
+    if (isOnHalf) {
+      pages.push("...")
+    }
+    const start = Math.max(2, currentPage - halfRange)
+    const end = Math.min(size - 1, currentPage + halfRange)
+
+    for (let i = start; i <= end; i++) {
+      pages.push(i)
+    }
+
+    if (currentPage < size - halfRange - 1) {
+      pages.push("...")
+    }
+    pages.push(size)
+  }
+
+  for (let page of pages) {
+    if (page === '...') {
+      paginationList.innerHTML += `
+          <li
+            class="bg-secondaryBackground text-textPrimary w-10 h-10 text-center leading-10"
+          >
+            ...
+          </li>
+      `
+    } else {
+      paginationList.innerHTML += `
+        <li
+          class="${page === currentPage
+          ? "bg-primaryMain text-white"
+          : "bg-secondaryBackground text-textPrimary"
+        } w-10 h-10 text-center leading-10 hover:bg-primaryMain hover:text-white"
+        >
+          <a class="block w-full h-full" href="?page=${page}" class="no-underline">${page}</a>
+        </li>
+      `
+    }
+  }
+
+  paginationList.innerHTML += `
+    <li
+      class="bg-secondaryBackground w-10 h-10 flex items-center justify-center ${currentPage === size ? "opacity-50 pointer-events-none" : ""
+    }"
+    >
+      <a class="flex items-center justify-center w-full h-full hover:bg-primaryMain" href="?page=${currentPage + 1}">
+        <img src="/src/assets/icons/arrow-right.png" alt="arrow right" />
+      </a>
+    </li>
+  `
+}
 
 async function fetchCourses() {
   try {
     const query = new URLSearchParams(window.location.search)
     const type = query.get("type") || ""
-    const page = query.get("page") || "1"
-    const perPage = query.get("limit") || "9"
-    const response = await http.get<Course[]>(API_ENDPOINTS.courses + "?type=" + type)
-    return response.data
+    const page = parseInt(query.get("page") || DEFAULT_PAGE.toString(), 10)
+    const perPage = parseInt(query.get("limit") || DEFAULT_LIMIT.toString(), 10)
+
+    const response = await http.get<Course[]>(API_ENDPOINTS.courses)
+
+    if (!response.data) {
+      return { data: [], total: 0 }
+    }
+
+    const filteredData = type
+      ? response.data.filter((course) => course.type === type)
+      : response.data
+
+    const total = filteredData.length
+
+    const paginatedData = filteredData.slice((page - 1) * perPage, page * perPage)
+
+    return { data: paginatedData, total }
   } catch (error) {
-    console.log("Error fetching courses: ", error)
-    return []
+    console.error("Error fetching courses: ", error)
+    return { data: [], total: 0 }
   }
 }
 
@@ -59,7 +155,7 @@ function renderCourses(courses: Course[]) {
             class="relative animate-on-scroll hover:!scale-105 cursor-pointer"
             data-animation="fadeIn"
           >
-            <img src="${course.image}" alt="${course.name}" class="w-[427px] h-[427px]" />
+            <img src="${course.image}" alt="${course.name}" class="md:w-[427px] md:h-[427px]" />
             <div
               class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
             >
@@ -87,9 +183,6 @@ function renderCourses(courses: Course[]) {
     courseList.innerHTML += element
   }
 }
-
-
-// Handle Course Pagination
 
 
 // Handle animation on scroll to

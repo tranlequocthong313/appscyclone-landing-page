@@ -9,7 +9,7 @@
       name="keywords"
       content="appscyclone, landing page, internship, frontend, technology"
     />
-    <title>Apps Cyclone Technology JSC - Landing Page</title>
+    <title>Apps Cyclone Technology JSC - Courses</title>
     <link href="/src/style.css" rel="stylesheet" />
   </head>
   <body class="box-border">
@@ -22,15 +22,8 @@
         <a href="/" class="no-underline">
           <img
             src="/src/assets/images/logo.png"
-            class="h-8 w-auto cursor-pointer hidden md:block"
+            class="h-8 w-auto cursor-pointer"
             alt="Logo"
-          />
-        </a>
-        <a href="/" class="no-underline">
-          <img
-            src="/src/assets/images/favicon.png"
-            class="h-10 w-auto cursor-pointer block md:hidden"
-            alt="Small Logo"
           />
         </a>
 
@@ -82,87 +75,75 @@
     </header>
 
     <!-- Main Content -->
-    <main class="mt-[72px] md:px-40 animate__animated animate__fadeIn">
+    <main
+      class="mt-[100px] md:mt-[130px] md:px-40 animate__animated animate__fadeIn"
+    >
       <!-- Course Filter -->
-      <section class="mb-10">
+      <section class="mb-20 md:mb-10 px-2.5 md:px-0">
         <h3 class="text-h3 text-[40px] mb-10 font-bold">All Courses</h3>
         <ul
           class="bg-secondaryBackground text-textPrimary flex flex-wrap p-0.5 text-center h-11 font-bold items-center md:w-[1147px]"
         >
-          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
-            <a href="/src/pages/courses.html">All</a>
+          <li
+            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
+          >
+            <a class="block w-full h-full" href="/src/pages/courses.html"
+              >All</a
+            >
           </li>
-          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
-            <a href="?type=FRONTEND">Frontend</a>
+          <li
+            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
+          >
+            <a class="block w-full h-full" href="?type=FRONTEND">Frontend</a>
           </li>
-          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
-            <a href="?type=Design">Design</a>
+          <li
+            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
+          >
+            <a class="block w-full h-full" href="?type=Design">Design</a>
           </li>
-          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
-            <a href="?type=BACKEND">Backend</a>
+          <li
+            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
+          >
+            <a class="block w-full h-full" href="?type=BACKEND">Backend</a>
           </li>
-          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
-            <a href="?type=Mobile">Mobile</a>
+          <li
+            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
+          >
+            <a class="block w-full h-full" href="?type=Mobile">Mobile</a>
           </li>
-          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
-            <a href="?type=QC">QC</a>
+          <li
+            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
+          >
+            <a class="block w-full h-full" href="?type=QC">QC</a>
           </li>
-          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
-            <a href="?type=GAME">Game</a>
+          <li
+            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
+          >
+            <a class="block w-full h-full" href="?type=GAME">Game</a>
           </li>
-          <li class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80">
-            <a href="?type=Blockchain">Blockchain</a>
+          <li
+            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
+          >
+            <a class="block w-full h-full" href="?type=Blockchain"
+              >Blockchain</a
+            >
           </li>
         </ul>
       </section>
 
       <!-- Course List -->
-      <section class="mb-10">
+      <section class="mb-10 px-2.5 md:px-0">
         <ul class="flex flex-wrap gap-28 items-center" id="courses"></ul>
       </section>
 
       <!-- Course Pagination -->
-      <section class="flex items-center gap-4 float-end">
+      <section
+        class="flex flex-col md:flex-row items-center gap-4 md:float-end px-2.5 md:px-0"
+      >
         <span class="text-regular text-[14px] text-textPrimary"
-          >Total <span id="total-items">0</span> items</span
+          >Total <span id="total-items"></span> items</span
         >
-        <ul class="flex gap-2 items-center pagination-list">
-          <li
-            class="bg-secondaryBackground w-10 h-10 flex items-center justify-center"
-          >
-            <img src="/src/assets/icons/arrow-left-back.png" alt="arrow left" />
-          </li>
-          <li
-            class="bg-primaryMain text-white w-10 h-10 text-center leading-10"
-          >
-            1
-          </li>
-          <li
-            class="bg-secondaryBackground text-textPrimary w-10 h-10 text-center leading-10"
-          >
-            2
-          </li>
-          <li
-            class="bg-secondaryBackground text-textPrimary w-10 h-10 text-center leading-10"
-          >
-            3
-          </li>
-          <li
-            class="bg-secondaryBackground text-textPrimary w-10 h-10 text-center leading-10"
-          >
-            ...
-          </li>
-          <li
-            class="bg-secondaryBackground text-textPrimary w-10 h-10 text-center leading-10"
-          >
-            6
-          </li>
-          <li
-            class="bg-secondaryBackground w-10 h-10 flex items-center justify-center"
-          >
-            <img src="/src/assets/icons/arrow-right.png" alt="arrow right" />
-          </li>
-        </ul>
+        <ul class="flex flex-wrap gap-2 items-center" id="pagination-list"></ul>
       </section>
     </main>
 
