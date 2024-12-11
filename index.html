@@ -19,16 +19,20 @@
     >
       <nav class="flex justify-between items-center">
         <!-- Logo -->
-        <img
-          src="/src/assets/images/logo.png"
-          class="h-8 w-auto cursor-pointer hidden md:block"
-          alt="Logo"
-        />
-        <img
-          src="/src/assets/images/favicon.png"
-          class="h-10 w-auto cursor-pointer block md:hidden"
-          alt="Small Logo"
-        />
+        <a href="/" class="no-underline">
+          <img
+            src="/src/assets/images/logo.png"
+            class="h-8 w-auto cursor-pointer hidden md:block"
+            alt="Logo"
+          />
+        </a>
+        <a href="/" class="no-underline">
+          <img
+            src="/src/assets/images/favicon.png"
+            class="h-10 w-auto cursor-pointer block md:hidden"
+            alt="Small Logo"
+          />
+        </a>
 
         <!-- Hamburger Menu -->
         <button
@@ -59,12 +63,12 @@
           <li
             class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center md:text-start my-5 md:my-0"
           >
-            Home
+            <a href="/" class="no-underline"> Home </a>
           </li>
           <li
             class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center md:text-start my-5 md:my-0"
           >
-            Courses
+            <a href="/src/pages/courses.html" class="no-underline"> Courses </a>
           </li>
           <li class="my-5 md:my-0">
             <button
@@ -78,9 +82,9 @@
     </header>
 
     <!-- Main Content -->
-    <main>
+    <main class="mt-[72px]">
       <!-- First Introduction -->
-      <section class="flex items-center mt-[72px] relative md:h-[945px]">
+      <section class="flex items-center relative md:h-[945px]">
         <img
           src="/src/assets/images/woman1.png"
           alt="Woman"
@@ -178,12 +182,17 @@
             </p>
           </div>
 
-          <button
-            class="hover:border-primaryMain border border-tertiaryBackground text-textPrimary rounded-[40px] p-4 md:w-[193px] h-[56px] flex items-center justify-center hover:scale-105 transition-transform duration-300 w-full md:absolute md:bottom-20 md:right-28"
-          >
-            View all
-            <img src="/src/assets/icons/arrow-right-2.png" alt="arrow right" />
-          </button>
+          <a href="/src/pages/courses.html" class="no-underline">
+            <button
+              class="hover:border-primaryMain border border-tertiaryBackground text-textPrimary rounded-[40px] p-4 md:w-[193px] h-[56px] flex items-center justify-center hover:scale-105 transition-transform duration-300 w-full md:absolute md:bottom-20 md:right-28"
+            >
+              View all
+              <img
+                src="/src/assets/icons/arrow-right-2.png"
+                alt="arrow right"
+              />
+            </button>
+          </a>
         </div>
       </section>
 
@@ -601,12 +610,14 @@
             <li
               class="text-textSecondary hover:text-primaryMain cursor-pointer"
             >
-              Home
+              <a href="/" class="no-underline"> Home </a>
             </li>
             <li
               class="text-textSecondary hover:text-primaryMain cursor-pointer"
             >
-              Course
+              <a href="/src/pages/courses.html" class="no-underline">
+                Course
+              </a>
             </li>
           </ul>
           <ul class="flex-1 flex flex-col gap-4">
@@ -645,6 +656,6 @@
       </p>
     </footer>
 
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/index.ts"></script>
   </body>
 </html>

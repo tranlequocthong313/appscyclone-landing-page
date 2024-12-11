@@ -21,7 +21,7 @@ document.getElementById("menuToggle")!.addEventListener("click", function () {
 document.addEventListener("DOMContentLoaded", async () => {
   const courses = await fetchCourses()
   renderCourse(courses[0])
-  renderCourses(courses)
+  renderCourses(courses.slice(0, 4))
 })
 
 async function fetchCourses() {
@@ -105,7 +105,7 @@ function renderCourses(courses: Course[]) {
             >
               ${course.learningForm}
             </div>
-            <div class="p-10 flex flex-col gap-4">
+            <div class="p-10 flex flex-col gap-4 bg-secondaryBackground">
               <div class="flex flex-col gap-2">
                 <p class="text-sm leading-6 text-textSecondary">${course.type}</p>
                 <h5 class="text-textPrimary text-2xl leading-9 font-bold">
