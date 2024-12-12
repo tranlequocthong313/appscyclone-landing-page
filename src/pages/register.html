@@ -9,7 +9,7 @@
       name="keywords"
       content="appscyclone, landing page, internship, frontend, technology"
     />
-    <title>Courses - Apps Cyclone Technology JSC</title>
+    <title>Register - Apps Cyclone Technology JSC</title>
     <link href="/src/style.css" rel="stylesheet" />
   </head>
   <body class="box-border">
@@ -78,77 +78,113 @@
 
     <!-- Main Content -->
     <main
-      class="mt-[100px] md:mt-[130px] md:px-40 animate__animated animate__fadeIn"
+      class="mt-[92px] md:mt-[92px] md:px-40 px-2.5 animate__animated animate__fadeIn flex justify-center items-center pb-40"
     >
-      <!-- Course Filter -->
-      <section class="mb-20 md:mb-10 px-2.5 md:px-0">
-        <h3 class="text-h3 text-[40px] mb-10 font-bold">All Courses</h3>
-        <ul
-          class="bg-secondaryBackground text-textPrimary flex flex-wrap p-0.5 text-center h-11 font-bold items-center md:w-[1147px]"
-        >
-          <li
-            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
-          >
-            <a class="block w-full h-full" href="/src/pages/courses.html"
-              >All</a
-            >
-          </li>
-          <li
-            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
-          >
-            <a class="block w-full h-full" href="?type=FRONTEND">Frontend</a>
-          </li>
-          <li
-            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
-          >
-            <a class="block w-full h-full" href="?type=Design">Design</a>
-          </li>
-          <li
-            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
-          >
-            <a class="block w-full h-full" href="?type=BACKEND">Backend</a>
-          </li>
-          <li
-            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
-          >
-            <a class="block w-full h-full" href="?type=Mobile">Mobile</a>
-          </li>
-          <li
-            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
-          >
-            <a class="block w-full h-full" href="?type=QC">QC</a>
-          </li>
-          <li
-            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
-          >
-            <a class="block w-full h-full" href="?type=GAME">Game</a>
-          </li>
-          <li
-            class="filter-item px-4 py-2.5 flex-1 hover:opaicy-80 hover:bg-tertiaryBackground hover:text-white"
-          >
-            <a class="block w-full h-full" href="?type=Blockchain"
-              >Blockchain</a
-            >
-          </li>
-        </ul>
-      </section>
+      <section class="md:w-[893px] animate-on-scroll" data-animation="fadeIn">
+        <h3 class="text-h3 text-[40px] font-bold mb-10 text-textPrimary">
+          Register for the Course
+        </h3>
 
-      <!-- Course List -->
-      <section class="mb-10 px-2.5">
-        <ul
-          class="flex flex-wrap gap-10 items-center justify-center"
-          id="courses"
-        ></ul>
-      </section>
+        <form class="flex flex-wrap flex-col gap-6" id="form">
+          <div class="flex flex-col md:flex-row gap-10 basis-full">
+            <div class="flex flex-col gap-4 basis-1/2">
+              <label class="font-bold text-textPrimary" for="name">Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Enter name"
+                class="rounded-lg font-medium border py-5 px-4 text-textSecondary text-[14px] border-gray-4 focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
+              />
+            </div>
 
-      <!-- Course Pagination -->
-      <section
-        class="flex flex-col md:flex-row items-center gap-4 md:justify-end px-2.5 md:px-0"
-      >
-        <span class="text-regular text-[14px] text-textPrimary"
-          >Total <span id="total-items"></span> items</span
-        >
-        <ul class="flex flex-wrap gap-2 items-center" id="pagination-list"></ul>
+            <div class="flex flex-col gap-4 basis-1/2">
+              <label for="email" class="font-bold text-textPrimary"
+                >Email</label
+              >
+              <input
+                class="rounded-lg font-medium border border-gray-4 py-5 px-4 text-textSecondary text-[14px] focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
+                id="email"
+                name="email"
+                type="text"
+                placeholder="Enter your email"
+              />
+            </div>
+          </div>
+
+          <div class="flex flex-col md:flex-row gap-10 basis-full">
+            <div class="flex flex-col gap-4 basis-1/2">
+              <label class="font-bold text-textPrimary" for="phone"
+                >Phone</label
+              >
+              <input
+                class="rounded-lg font-medium border border-gray-4 py-5 px-4 text-textSecondary text-[14px] focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
+                id="phone"
+                name="phone"
+                type="text"
+                placeholder="Enter your phone number"
+              />
+            </div>
+
+            <div class="flex flex-col gap-4 basis-1/2">
+              <label for="learning-form" class="font-bold text-textPrimary"
+                >Learning form</label
+              >
+              <div class="relative w-full">
+                <select
+                  id="learning-form"
+                  name="learning-form"
+                  class="rounded-lg w-full font-medium border border-gray-4 py-5 px-4 text-textPrimary bg-white text-[14px] cursor-pointer focus:outline-none focus:ring-2 focus:ring-tertiaryBackground appearance-none"
+                >
+                  <option class="text-textPrimary font-medium" value="offline">
+                    Learn offline
+                  </option>
+                  <option class="text-textPrimary font-medium" value="online">
+                    Learn online
+                  </option>
+                </select>
+                <img
+                  class="absolute right-3 top-5 flex items-center pointer-events-none"
+                  src="/src/assets/icons/arrow-down.png"
+                  alt="arrow down"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="basis-full flex flex-col gap-4">
+            <label class="font-bold text-textPrimary" for="fb-url"
+              >Facebook URL</label
+            >
+            <input
+              class="rounded-lg font-medium border border-gray-4 py-5 px-4 text-textSecondary text-[14px] focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
+              id="fb-url"
+              name="fb-url"
+              type="text"
+              placeholder="Enter your facebook URL"
+            />
+          </div>
+
+          <div class="basis-full flex flex-col gap-4">
+            <label class="font-bold text-textPrimary" for="opinion"
+              >Personal opinion</label
+            >
+            <textarea
+              class="rounded-lg font-medium border border-gray-4 py-5 px-4 text-textSecondary text-[14px] focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
+              id="opinion"
+              name="opinion"
+              rows="4"
+              maxlength="200"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full p-4 rounded-[40px] bg-tertiaryBackground text-white font-bold mt-16 focus:outline-none focus:ring-2 focus:ring-primaryMain"
+          >
+            Confirm
+          </button>
+        </form>
       </section>
     </main>
 
@@ -229,6 +265,6 @@
       </p>
     </footer>
 
-    <script type="module" src="/src/courses.ts"></script>
+    <script type="module" src="/src/register.ts"></script>
   </body>
 </html>

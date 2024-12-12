@@ -49,6 +49,7 @@ export default {
         primaryMain: '#00A8A4', // Primary 5
         primaryLight: '#C7C7D1', // Primary 1
         primaryDark: '#006678', // Primary 7
+        danger: '#EF4444',
       },
     },
   },

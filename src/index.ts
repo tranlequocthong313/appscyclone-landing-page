@@ -76,7 +76,9 @@ function renderCourse(course: Course) {
                   <button
                     class="bg-tertiaryBackground text-white rounded-[40px] py-4 px-10 font-bold hover:bg-primaryMain animate__animated animate__fadeInUp animate__delay-2s transition-transform duration-300 ease-in-out"
                   >
-                    Register for school
+                    <a href="/src/pages/register.html" class="block w-full h-full">
+                      Register for school
+                    </a>
                   </button>
                   <button
                     class="bg-transparent text-textPrimary rounded-[40px] py-4 px-6 w-full md:w-[220px] border border-tertiaryBackground font-bold hover:border-primaryMain hover:text-primaryMain animate__animated animate__fadeInUp animate__delay-2s transition-transform duration-300 ease-in-out"
