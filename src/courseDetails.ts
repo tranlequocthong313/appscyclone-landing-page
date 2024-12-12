@@ -1,6 +1,10 @@
 import 'animate.css'
+import 'swiper/css'
+
 import http, { API_ENDPOINTS } from './api'
 import { Course } from './type'
+import Swiper from 'swiper'
+import { Autoplay, Navigation } from 'swiper/modules'
 
 const faqItems = document.querySelectorAll(".faq-item")!
 const recommendedCourses = document.querySelector("#recommended-courses")!
@@ -146,39 +150,58 @@ function renderCourseDetails(course: Course) {
 
   for (const lecturer of course.lecturers) {
     lectureList.innerHTML += `
-          <div
-            class="relative animate-on-scroll hover:!scale-105 cursor-pointer md:w-[310px]"
+          <li
+            class="relative animate-on-scroll hover:!scale-105 cursor-pointer swiper-slide !flex flex-col items-center md:items-start"
             data-animation="fadeIn"
           >
-            <a>
-              <img
-                src="${lecturer.avatar}"
-                alt="avatar"
-                class="w-full"
-              />
-              <div
-                class="absolute top-5 right-5 ${lecturer.isTeacher ? "bg-primaryMain text-white" : "bg-secondaryBackground text-textPrimary"} px-4 py-2"
-              >
-                ${lecturer.isTeacher ? "Teacher" : "Mentor"}
+            <img
+              src="${lecturer.avatar}"
+              alt="avatar"
+              class="w-[310px] h-[310px]"
+            />
+            <div
+              class="absolute top-5 right-10 md:right-28 ${lecturer.isTeacher ? "bg-primaryMain text-white" : "bg-secondaryBackground text-textPrimary"} px-4 py-2"
+            >
+              ${lecturer.isTeacher ? "Teacher" : "Mentor"}
+            </div>
+            <div class="py-4 flex flex-col gap-4 w-[310px] h-[310px]">
+              <div class="gap-1">
+                <p class="text-textSecondary">${lecturer.title}</p>
+                <h5 class="text-textPrimary text-2xl leading-9 font-bold">
+                  ${lecturer.name}
+                </h5>
               </div>
-              <div class="py-4 flex flex-col gap-4">
-                <div class="gap-1">
-                  <p class="text-textSecondary">${lecturer.title}</p>
-                  <h5 class="text-textPrimary text-2xl leading-9 font-bold">
-                    ${lecturer.name}
-                  </h5>
-                </div>
-                <p class="text-lg text-textSecondary">
-                  ${lecturer.bio}
-                </p>
-                <p class="underline text-lg text-textSecondary">
-                  ${lecturer.website}
-                </p>
-              </div>
-            </a>
-          </div>
+              <p class="text-lg text-textSecondary">
+                ${lecturer.bio}
+              </p>
+              <p class="underline text-lg text-textSecondary">
+                ${lecturer.website}
+              </p>
+            </div>
+          </li>
     `
   }
+
+  new Swiper('#lecturer__swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    direction: 'horizontal',
+    slidesPerView: 1,
+    speed: 1000,
+    modules: [Navigation, Autoplay],
+    navigation: {
+      prevEl: '#lecturer__swiper-button-prev',
+      nextEl: '#lecturer__swiper-button-next',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        speed: 1500,
+      }
+    }
+  })
 }
 
 

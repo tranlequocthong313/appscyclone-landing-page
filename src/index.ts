@@ -1,10 +1,13 @@
 import 'animate.css'
+import 'swiper/css'
 
 import http, { API_ENDPOINTS } from './api'
 import { Course, Evaluation } from './type'
+import Swiper from 'swiper'
+import { Navigation, Autoplay } from 'swiper/modules'
 
 
-const courseComingUp = document.querySelector("#course-coming-up")!
+const courseComingUp = document.querySelector("#course-coming-up .swiper-wrapper")!
 const courseList = document.querySelector("#course-list")!
 const evaluationElement = document.querySelector("#evaluation")!
 const faqItems = document.querySelectorAll(".faq-item")
@@ -20,8 +23,22 @@ document.getElementById("menuToggle")!.addEventListener("click", function () {
 // Handle Coming Course & All Courses Section
 document.addEventListener("DOMContentLoaded", async () => {
   const courses = await fetchCourses()
-  renderCourse(courses[0])
+  renderCourse(courses)
   renderCourses(courses.slice(0, 4))
+
+  new Swiper('#course-coming-up', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    direction: 'horizontal',
+    speed: 1000,
+    modules: [Navigation, Autoplay],
+    navigation: {
+      nextEl: '#coming-course__swiper-button-prev',
+      prevEl: '#coming-course__swiper-button-next',
+    },
+  })
 })
 
 async function fetchCourses() {
@@ -34,21 +51,21 @@ async function fetchCourses() {
   }
 }
 
-function renderCourse(course: Course) {
-  const teacher = course.lecturers.find(lecturer => lecturer.isTeacher) || course.lecturers[0]
+function renderCourse(courses: Course[]) {
+  for (const course of courses) {
+    const teacher = course.lecturers.find(lecturer => lecturer.isTeacher) || course.lecturers[0]
 
-  const element = `
+    const element = `
             <div
-              class="flex items-center justify-center relative w-full px-2.5"
+              class="!flex items-center w-full justify-center relative px-2.5 swiper-slide md:-left-20"
             >
               <img
                 src="${course.image}"
-                class="w-[427px] h-[427px] relative -left-24 animate-on-scroll hidden md:block"
-                data-animation="zoomIn"
+                class="w-[427px] h-[427px] relative -left-24 hidden md:block"
                 alt="${course.name}"
               />
               <div
-                class="flex flex-col w-full gap-20 animate__animated animate__fadeInUp animate__delay-1s"
+                class="flex flex-col w-full max-w-[504px] gap-20"
               >
                 <div class="flex flex-col gap-10">
                   <div class="flex flex-col gap-4">
@@ -74,14 +91,14 @@ function renderCourse(course: Course) {
                 </div>
                 <div class="flex gap-4 flex-col md:flex-row">
                   <button
-                    class="bg-tertiaryBackground text-white rounded-[40px] py-4 px-10 font-bold hover:bg-primaryMain animate__animated animate__fadeInUp animate__delay-2s transition-transform duration-300 ease-in-out"
+                    class="bg-tertiaryBackground text-white rounded-[40px] py-4 px-10 font-bold hover:bg-primaryMain transition-transform duration-300 ease-in-out"
                   >
                     <a href="/src/pages/register.html" class="block w-full h-full">
                       Register for school
                     </a>
                   </button>
                   <button
-                    class="bg-transparent text-textPrimary rounded-[40px] py-4 px-6 w-full md:w-[220px] border border-tertiaryBackground font-bold hover:border-primaryMain hover:text-primaryMain animate__animated animate__fadeInUp animate__delay-2s transition-transform duration-300 ease-in-out"
+                    class="bg-transparent text-textPrimary rounded-[40px] py-4 px-6 w-full md:w-[220px] border border-tertiaryBackground font-bold hover:border-primaryMain hover:text-primaryMain transition-transform duration-300 ease-in-out"
                   >
                     <a class="block w-full h-full" href="/src/pages/course-details?id=${course.id}">
                       See details
@@ -92,7 +109,8 @@ function renderCourse(course: Course) {
             </div>
           `
 
-  courseComingUp.innerHTML += element
+    courseComingUp.innerHTML += element
+  }
 }
 
 function renderCourses(courses: Course[]) {
@@ -137,6 +155,51 @@ function renderCourses(courses: Course[]) {
 }
 
 
+// Handle Team Swiper
+document.addEventListener("DOMContentLoaded", () => {
+  new Swiper('#team__swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    direction: 'horizontal',
+    slidesPerView: 1,
+    speed: 1000,
+    modules: [Navigation, Autoplay],
+    navigation: {
+      prevEl: '#team__swiper-button-prev',
+      nextEl: '#team__swiper-button-next',
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4,
+        speed: 1500,
+      }
+    }
+  })
+})
+
+
+// Evaluation
+document.addEventListener("DOMContentLoaded", async () => {
+  const evaluations = await fetchEvaluations()
+  renderEvaluations(evaluations)
+
+  new Swiper('#evaluation__swiper', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+    },
+    direction: 'horizontal',
+    speed: 1000,
+    modules: [Navigation, Autoplay],
+    navigation: {
+      nextEl: '#evaluation__swiper-button-prev',
+      prevEl: '#evaluation__swiper-button-next',
+    },
+  })
+})
+
 async function fetchEvaluations() {
   try {
     const response = await http.get(API_ENDPOINTS.evaluations)
@@ -147,36 +210,38 @@ async function fetchEvaluations() {
   }
 }
 
-function renderEvaluation(evaluation: Evaluation) {
-  const element = `
+function renderEvaluations(evaluations: Evaluation[]) {
+  for (const evaluation of evaluations) {
+    const element = `
+      <div
+        class="p-8 border border-gray-4 w-full max-w-[426px] h-[426px] animate-on-scroll hover:scale-105 cursor-pointer swiper-slide"
+        data-animation="fadeIn"
+      >
+        <img
+          src="src/assets/images/quote.png"
+          class="w-8 h-6 mb-10 -scale-x-100"
+          alt="quote"
+        />
+        <p class="text-textSecondary text-lg mb-14 line-clamp-6">
+          ${evaluation.content}
+        </p>
+        <div class="flex items-center gap-2">
           <img
-            src="src/assets/images/quote.png"
-            class="w-8 h-6 mb-10 -scale-x-100"
-            alt="quote"
+            src="${evaluation.author.avatar}"
+            alt="avatar"
+            class="rounded-full"
           />
-          <p class="text-textSecondary text-lg mb-14">
-            ${evaluation.content}
-          </p>
-          <div class="flex items-center gap-2">
-            <img
-              src="${evaluation.author.avatar}"
-              alt="avatar"
-              class="rounded-full"
-            />
-            <div class="flex flex-col gap-1">
-              <h6 class="text-lg font-bold">${evaluation.author.name}</h6>
-              <p class="text-textSecondary">${evaluation.author.badge}</p>
-            </div>
+          <div class="flex flex-col gap-1">
+            <h6 class="text-lg font-bold">${evaluation.author.name}</h6>
+            <p class="text-textSecondary">${evaluation.author.badge}</p>
           </div>
-  `
-  evaluationElement.innerHTML += element
+        </div>
+      </div>
+    `
+    evaluationElement.innerHTML += element
+  }
 }
 
-// Evaluation
-document.addEventListener("DOMContentLoaded", async () => {
-  const evaluations = await fetchEvaluations()
-  renderEvaluation(evaluations[0])
-})
 
 
 // Handle FAQ Section

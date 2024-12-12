@@ -258,10 +258,9 @@
       >
         <h4 class="text-h4 font-medium mt-20 mb-16">Lectures</h4>
 
-        <div
-          class="flex flex-col md:flex-row gap-10 justify-center"
-          id="lectures"
-        ></div>
+        <div class="swiper flex w-full" id="lecturer__swiper">
+          <ul class="flex md:px-12 swiper-wrapper" id="lectures"></ul>
+        </div>
 
         <div
           class="justify-end flex gap-4 animate-on-scroll md:mt-6"
@@ -269,13 +268,15 @@
         >
           <img
             src="/src/assets/icons/arrow-left-2.png"
-            class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer"
+            class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer swiper-button-prev"
             alt="arrow left"
+            id="lecturer__swiper-button-prev"
           />
           <img
             src="/src/assets/icons/arrow-right-2.png"
-            class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer"
+            class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer swiper-button-next"
             alt="arrow right"
+            id="lecturer__swiper-button-next"
           />
         </div>
       </section>

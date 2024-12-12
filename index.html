@@ -122,7 +122,7 @@
       </section>
 
       <!-- Course coming soon -->
-      <section class="md:h-[900px] relative">
+      <section class="md:h-[900px] relative mb-20 md:mb-0">
         <div
           class="flex justify-between md:px-40 md:mb-20 flex-col md:flex-row px-2.5"
         >
@@ -138,21 +138,29 @@
               class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer animate-on-scroll swiper-button-prev"
               data-animation="fadeIn"
               alt="arrow left"
+              id="coming-course__swiper-button-prev"
             />
             <img
               src="/src/assets/icons/arrow-right-2.png"
               class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer animate-on-scroll swiper-button-next"
               data-animation="fadeIn"
               alt="arrow right"
+              id="coming-course__swiper-button-next"
             />
           </div>
         </div>
         <div class="relative h-full">
           <div
-            class="bg-secondaryBackground md:w-4/5 h-[539px] md:absolute md:right-0 md:bottom-0 md:top-0 flex items-center animate-on-scroll w-full"
-            data-animation="fadeInUp"
-            id="course-coming-up"
+            class="bg-secondaryBackground md:w-4/5 h-[539px] md:absolute md:right-0 md:bottom-0 md:top-0 animate-on-scroll w-full hidden md:block"
+            data-animation="fadeIn"
           ></div>
+          <div
+            class="swiper md:w-4/5 h-[539px] !flex items-center animate-on-scroll"
+            data-animation="fadeIn"
+            id="course-coming-up"
+          >
+            <div class="swiper-wrapper flex items-center"></div>
+          </div>
         </div>
       </section>
 
@@ -201,7 +209,7 @@
 
       <!-- Team -->
       <section
-        class="md:px-40 px-2.5 md:h-[926px] flex flex-col justify-center"
+        class="md:px-40 px-2.5 md:h-[926px] flex flex-col justify-center pb-40 md:pb-0"
       >
         <div class="flex justify-between flex-col md:flex-row">
           <div class="md:w-[660px] flex flex-col gap-6">
@@ -223,71 +231,116 @@
           <div class="flex gap-4 mt-5 md:mt-0">
             <img
               src="/src/assets/icons/arrow-left-2.png"
-              class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer animate-on-scroll"
+              class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer animate-on-scroll swiper-button-prev"
               data-animation="fadeIn"
               alt="arrow left"
+              id="team__swiper-button-prev"
             />
             <img
               src="/src/assets/icons/arrow-right-2.png"
-              class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer animate-on-scroll"
+              class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer animate-on-scroll swiper-button-next"
               data-animation="fadeIn"
               alt="arrow right"
+              id="team__swiper-button-next"
             />
           </div>
         </div>
-        <ul
-          class="flex flex-col md:flex-row gap-10 justify-between items-center mt-20 animate-on-scroll"
-          data-animation="fadeIn"
-        >
-          <li class="relative hover:scale-105 cursor-pointer">
-            <div
-              class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-0 right-0"
-            ></div>
-            <img src="src/assets/images/ceo1.png" alt="ceo" />
-            <div
-              class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20"
+        <div class="swiper flex w-full items-center mt-20" id="team__swiper">
+          <ul
+            class="flex md:flex-row justify-between items-center animate-on-scroll swiper-wrapper md:px-12"
+            data-animation="fadeIn"
+          >
+            <li
+              class="relative hover:scale-105 cursor-pointer swiper-slide w-[310px] !flex justify-center md:justify-start"
             >
-              <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
-              <span class="text-textPrimary">CEO</span>
-            </div>
-          </li>
-          <li class="relative hover:scale-105 cursor-pointer">
-            <div
-              class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-0 right-0"
-            ></div>
-            <img src="src/assets/images/ceo2.png" alt="ceo" />
-            <div
-              class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20"
+              <div
+                class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-5 md:left-0 right-0"
+              ></div>
+              <img src="src/assets/images/ceo1.png" alt="ceo" />
+              <div
+                class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20 left-5 md:left-0"
+              >
+                <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+                <span class="text-textPrimary">CEO</span>
+              </div>
+            </li>
+
+            <li
+              class="relative hover:scale-105 cursor-pointer swiper-slide w-[310px] !flex justify-center md:justify-start"
             >
-              <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
-              <span class="text-textPrimary">CEO</span>
-            </div>
-          </li>
-          <li class="relative hover:scale-105 cursor-pointer">
-            <div
-              class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-0 right-0"
-            ></div>
-            <img src="src/assets/images/ceo3.png" alt="ceo" />
-            <div
-              class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20"
+              <div
+                class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-5 md:left-0 right-0"
+              ></div>
+              <img src="src/assets/images/ceo1.png" alt="ceo" />
+              <div
+                class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20 left-5 md:left-0"
+              >
+                <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+                <span class="text-textPrimary">CEO</span>
+              </div>
+            </li>
+
+            <li
+              class="relative hover:scale-105 cursor-pointer swiper-slide w-[310px] !flex justify-center md:justify-start"
             >
-              <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
-              <span class="text-textPrimary">CEO</span>
-            </div>
-          </li>
-          <li class="relative hover:scale-105 cursor-pointer">
-            <div
-              class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-0 right-0"
-            ></div>
-            <img src="src/assets/images/ceo4.png" alt="ceo" />
-            <div
-              class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20"
+              <div
+                class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-5 md:left-0 right-0"
+              ></div>
+              <img src="src/assets/images/ceo2.png" alt="ceo" />
+              <div
+                class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20 left-5 md:left-0"
+              >
+                <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+                <span class="text-textPrimary">CEO</span>
+              </div>
+            </li>
+
+            <li
+              class="relative hover:scale-105 cursor-pointer swiper-slide w-[310px] !flex justify-center md:justify-start"
             >
-              <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
-              <span class="text-textPrimary">CEO</span>
-            </div>
-          </li>
-        </ul>
+              <div
+                class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-5 md:left-0 right-0"
+              ></div>
+              <img src="src/assets/images/ceo3.png" alt="ceo" />
+              <div
+                class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20 left-5 md:left-0"
+              >
+                <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+                <span class="text-textPrimary">CEO</span>
+              </div>
+            </li>
+
+            <li
+              class="relative hover:scale-105 cursor-pointer swiper-slide w-[310px] !flex justify-center md:justify-start"
+            >
+              <div
+                class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-5 md:left-0 right-0"
+              ></div>
+              <img src="src/assets/images/ceo4.png" alt="ceo" />
+              <div
+                class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20 left-5 md:left-0"
+              >
+                <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+                <span class="text-textPrimary">CEO</span>
+              </div>
+            </li>
+
+            <li
+              class="relative hover:scale-105 cursor-pointer swiper-slide w-[310px] !flex justify-center md:justify-start"
+            >
+              <div
+                class="bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-5 md:left-0 right-0"
+              ></div>
+              <img src="src/assets/images/ceo4.png" alt="ceo" />
+              <div
+                class="absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20 left-5 md:left-0"
+              >
+                <h5 class="text-h5 font-bold text-textPrimary">Jane Cooper</h5>
+                <span class="text-textPrimary">CEO</span>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
 
       <!-- Special Value -->
@@ -351,6 +404,7 @@
       <!-- Evaluation -->
       <section
         class="flex flex-col md:flex-row md:px-40 gap-10 md:h-[706px] items-center px-2.5"
+        id="evaluation-section"
       >
         <div class="flex-1 flex-col flex gap-3 md:gap-36">
           <h4
@@ -362,21 +416,23 @@
           <div class="flex gap-4 animate-on-scroll" data-animation="fadeIn">
             <img
               src="/src/assets/icons/arrow-left-2.png"
-              class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer"
+              class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer swiper-button-prev"
+              id="evaluation__swiper-button-prev"
               alt="arrow left"
             />
             <img
               src="/src/assets/icons/arrow-right-2.png"
-              class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer"
+              class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer swiper-button-next"
+              id="evaluation__swiper-button-next"
               alt="arrow right"
             />
           </div>
         </div>
-        <div
-          class="flex-1 p-8 border border-gray-4 max-w-[426px] h-[426px] animate-on-scroll hover:scale-105 cursor-pointer"
-          data-animation="fadeIn"
-          id="evaluation"
-        ></div>
+
+        <div class="swiper w-full md:w-[426px]" id="evaluation__swiper">
+          <div class="swiper-wrapper" id="evaluation"></div>
+        </div>
+
         <img
           src="src/assets/images/playing-team.png"
           class="animate-on-scroll hover:scale-105 cursor-pointer"
