@@ -155,29 +155,31 @@ function renderCourses(courses: Course[]) {
             class="relative animate-on-scroll hover:!scale-105 cursor-pointer"
             data-animation="fadeIn"
           >
-            <img src="${course.image}" alt="${course.name}" class="md:w-[427px] md:h-[427px]" />
-            <div
-              class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
-            >
-              ${course.learningForm}
-            </div>
-            <div class="p-10 flex flex-col gap-4 bg-secondaryBackground">
-              <div class="flex flex-col gap-2">
-                <p class="text-sm leading-6 text-textSecondary">${course.type}</p>
-                <h5 class="text-textPrimary text-2xl leading-9 font-bold">
-                  ${course.name}
-                </h5>
+            <a href="/src/pages/course-details.html?id=${course.id}">
+              <img src="${course.image}" alt="${course.name}" class="md:w-[427px] md:h-[427px]" />
+              <div
+                class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
+              >
+                ${course.learningForm}
               </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <img src="${teacher.avatar}" alt="${teacher.name}" />
-                  <span>${teacher.name}</span>
+              <div class="p-10 flex flex-col gap-4 bg-secondaryBackground">
+                <div class="flex flex-col gap-2">
+                  <p class="text-sm leading-6 text-textSecondary">${course.type}</p>
+                  <h5 class="text-textPrimary text-2xl leading-9 font-bold">
+                    ${course.name}
+                  </h5>
                 </div>
-                <span class="text-textPrimary font-bold text-xl"
-                  >${course.price}</span
-                >
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <img src="${teacher.avatar}" alt="${teacher.name}" class="w-10 h-10 rounded-full" />
+                    <span>${teacher.name}</span>
+                  </div>
+                  <span class="text-textPrimary font-bold text-xl"
+                    >${course.price}đ</span
+                  >
+                </div>
               </div>
-            </div>
+            </a>
           </div>`
 
     courseList.innerHTML += element

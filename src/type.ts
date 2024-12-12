@@ -17,12 +17,15 @@ export interface Lecture {
     name: string
     avatar: string
     isTeacher: boolean
+    title: string
+    bio: string
+    website: string
 }
 
 export interface Schedule {
     openingDay: string
     time: string
-    days: SchoolDay[]
+    schoolDay: SchoolDay[]
     address: string
 }
 

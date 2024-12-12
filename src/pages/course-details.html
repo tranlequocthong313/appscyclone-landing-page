@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/src/assets/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="AppsCyclone Landing Page" />
+    <meta
+      name="keywords"
+      content="appscyclone, landing page, internship, frontend, technology"
+    />
+    <title>Apps Cyclone Technology JSC - Course Details</title>
+    <link href="/src/style.css" rel="stylesheet" />
+  </head>
+  <body class="box-border">
+    <!-- Navbar -->
+    <header
+      class="w-full fixed h-[72px] top-0 z-50 bg-white/70 px-4 md:px-40 pt-4 pb-2"
+    >
+      <nav class="flex justify-between items-center">
+        <!-- Logo -->
+        <a href="/" class="no-underline">
+          <img
+            src="/src/assets/images/logo.png"
+            class="h-8 w-auto cursor-pointer"
+            alt="Logo"
+          />
+        </a>
+
+        <!-- Hamburger Menu -->
+        <button
+          id="menuToggle"
+          class="block md:hidden text-textPrimary focus:outline-none"
+        >
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Menu -->
+        <ul
+          id="menu"
+          class="hidden md:flex items-center gap-10 bg-white md:bg-transparent absolute md:static top-[72px] right-0 w-full md:w-auto md:gap-10 px-4 md:px-0 shadow md:shadow-none"
+        >
+          <li
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center md:text-start my-5 md:my-0"
+          >
+            <a href="/" class="no-underline"> Home </a>
+          </li>
+          <li
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center md:text-start my-5 md:my-0"
+          >
+            <a href="/src/pages/courses.html" class="no-underline"> Courses </a>
+          </li>
+          <li class="my-5 md:my-0">
+            <button
+              class="font-bold rounded-[40px] py-3 px-6 bg-tertiaryBackground text-white h-12 hover:bg-primaryMain w-full md:w-auto"
+            >
+              Registered
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="mt-[100px] md:mt-[130px]">
+      <!-- General Info -->
+      <section class="mb-20 md:px-40 px-2.5">
+        <div
+          class="flex md:gap-40 items-center justify-center relative w-full md:p-20 md:bg-secondaryBackground"
+        >
+          <div
+            class="flex flex-col w-full gap-20 animate__animated animate__fadeInUp animate__delay-1s"
+          >
+            <div class="flex flex-col gap-6 md:gap-10 md:p-10">
+              <div class="flex flex-col gap-4">
+                <div class="md:gap-1 flex flex-col md:mb-16">
+                  <p class="text-textSecondary text-lg" id="course-type"></p>
+                  <h4
+                    class="text-h4 font-bold text-[64px] leading-[89.6px]"
+                    id="course-name"
+                  ></h4>
+                </div>
+
+                <div
+                  class="flex flex-col md:flex-row gap-8 md:gap-14 text-center md:text-start"
+                >
+                  <div class="flex flex-col gap-4">
+                    <p class="text-textSecondary">Opening day</p>
+                    <h5 class="text-h5 font-bold" id="opening-day"></h5>
+                  </div>
+                  <div class="flex flex-col gap-4">
+                    <p class="text-textSecondary">Time limit</p>
+                    <h5 class="text-h5 font-bold" id="time-limit"></h5>
+                  </div>
+                  <div class="flex flex-col gap-4">
+                    <p class="text-textSecondary">Learning form</p>
+                    <h5 class="text-h5 font-bold" id="learning-form"></h5>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col md:flex-row gap-6 bg-white justify-between items-center p-6"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="/src/assets/images/avatar.png"
+                    alt="avatar"
+                    class="w-10 h-10"
+                    id="teacher-avatar"
+                  />
+                  <p class="text-textSecondary" id="teacher-name"></p>
+                </div>
+                <span
+                  class="text-textPrimary font-bold text-xl"
+                  id="price"
+                ></span>
+              </div>
+
+              <button
+                class="bg-tertiaryBackground text-white rounded-[40px] py-4 px-10 font-bold hover:bg-primaryMain animate__animated animate__fadeInUp animate__delay-2s transition-transform duration-300 ease-in-out md:w-[233px] w-full"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+          <img
+            class="animate-on-scroll hidden md:block"
+            data-animation="zoomIn"
+            alt="React"
+            id="course-thumbnail"
+          />
+        </div>
+      </section>
+
+      <!-- Introduce -->
+      <section
+        class="md:px-40 flex flex-col items-center gap-10 px-2.5 animate-on-scroll"
+        data-animation="fadeIn"
+      >
+        <div class="flex flex-col md:flex-row gap-10">
+          <div class="flex flex-col gap-4 md:w-[660px]">
+            <h4 class="text-h4 text-textPrimary font-medium">Introduce</h4>
+            <p class="text-lg text-textSecondary">
+              This FRONTEND MASTER PROGRAMMING course is suitable for those of
+              you who are IT students or those who want to become a
+              comprehensive Front-end Dev to work in companies. After the
+              course, you will have completed 5 projects like working and have
+              full knowledge from basic to advanced of a Front-end Dev. In
+              addition to the knowledge, you will accumulate a lot of experience
+              in the process of studying and doing projects to easily apply
+              successfully. After the course, you will have completed 5 projects
+              like working and have full knowledge from basic to advanced of a
+              Front-end Dev.
+            </p>
+          </div>
+          <img src="/src/assets/images/video.png" alt="video" />
+        </div>
+
+        <div class="flex gap-10 flex-col md:flex-row">
+          <img src="/src/assets/images/video.png" alt="video" />
+          <div class="flex flex-col gap-4 md:w-[660px]">
+            <div class="text-textSecondary text-lg flex flex-col gap-6">
+              <p>The Frontend Master course is divided into 3 main phases:</p>
+              <p>
+                - <strong>Frontend Newbie: </strong>6 week duration (2
+                sessions/week). Class time 18h45 - 21h45 Tuesday and Saturday.
+              </p>
+              <p>
+                - <strong>Web Responsive: </strong>6 week duration (2
+                sessions/week). Class time 18h45 - 21h45 Tuesday and Saturday
+              </p>
+              <p>
+                - <strong>ReactJS Master: </strong>6 weeks duration (3
+                sessions/week). Study time 18h45 - 21h45 on Mondays, Wednesdays
+                and Fridays
+              </p>
+              <p>
+                <strong>FORM: </strong>OFFLINE OR ONLINE GOOGLE MEET WITH
+                OFFLINE CLASS
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Schedule -->
+      <section
+        class="md:px-40 px-2.5 animate-on-scroll"
+        data-animation="fadeIn"
+      >
+        <h4 class="text-h4 font-medium mt-20 mb-16">Schedule</h4>
+        <div class="flex flex-col md:flex-row">
+          <div class="flex flex-col md:w-[543px]">
+            <div class="flex flex-col md:flex-row">
+              <div class="p-10 flex flex-col gap-4 border border-gay-2 flex-1">
+                <p class="text-textSecondary">Opening day</p>
+                <h5 id="schedule__opening-day" class="text-h5 font-bold"></h5>
+              </div>
+              <div class="p-10 flex flex-col gap-4 border border-gay-2 flex-1">
+                <p class="text-textSecondary">Time</p>
+                <h5 id="schedule__time" class="text-h5 font-bold"></h5>
+              </div>
+            </div>
+            <div class="p-10 flex flex-col gap-4 border border-gay-2">
+              <p class="text-textSecondary">Address</p>
+              <h5 class="text-h5 font-bold" id="schedule__address"></h5>
+            </div>
+          </div>
+          <div class="p-10 flex flex-col gap-4 border border-gay-2 flex-1">
+            <p class="text-textSecondary">School day</p>
+            <ul id="schedule__school-days"></ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content -->
+      <section
+        class="md:px-40 px-2.5 animate-on-scroll"
+        data-animation="fadeIn"
+      >
+        <h4 class="text-h4 font-medium mt-20 mb-16">Content</h4>
+
+        <ul class="flex flex-wrap md:gap-x-8" id="content-list"></ul>
+      </section>
+
+      <!-- Required Requirements -->
+      <section
+        class="p-10 flex flex-col gap-10 items-center animate-on-scroll md:mt-6"
+        data-animation="fadeIn"
+      >
+        <h4 class="text-h4 font-medium text-center">Required requirements</h4>
+        <ul
+          class="flex flex-col gap-8 md:w-[580px]"
+          id="required-requirements"
+        ></ul>
+      </section>
+
+      <!-- Lectures -->
+      <section
+        class="md:px-40 mb-40 px-2.5 animate-on-scroll"
+        data-animation="fadeIn"
+      >
+        <h4 class="text-h4 font-medium mt-20 mb-16">Lectures</h4>
+
+        <div
+          class="flex flex-col md:flex-row gap-10 justify-center"
+          id="lectures"
+        ></div>
+
+        <div
+          class="justify-end flex gap-4 animate-on-scroll md:mt-6"
+          data-animation="fadeIn"
+        >
+          <img
+            src="/src/assets/icons/arrow-left-2.png"
+            class="rounded-full p-4 border w-14 h-14 border-gray-4 cursor-pointer"
+            alt="arrow left"
+          />
+          <img
+            src="/src/assets/icons/arrow-right-2.png"
+            class="rounded-full p-4 border w-14 h-14 border-tertiaryBackground cursor-pointer"
+            alt="arrow right"
+          />
+        </div>
+      </section>
+
+      <!-- Special Value -->
+      <section
+        class="px-2.5 md:px-40 flex flex-col md:flex-row bg-secondaryBackground relative md:h-[896px] pt-40 animate-on-scroll"
+        data-animation="fadeIn"
+      >
+        <div class="flex-1">
+          <h4
+            class="text-h4 md:text-[40px] leading-[56px] font-bold text-primaryMain md:w-[420px] h-28 animate-on-scroll mb-5 md:mb-0"
+            data-animation="fadeIn"
+          >
+            Special Value <span class="text-textPrimary">from Appscyclone</span>
+          </h4>
+          <img
+            src="/src/assets/images/corner2.png"
+            class="absolute left-0 bottom-0 animate-on-scroll"
+            data-animation="fadeInLeft"
+            alt="corner"
+          />
+        </div>
+        <ul
+          class="flex-1 flex gap-10 flex-col animate-on-scroll mt-8 mb-32"
+          data-animation="fadeIn"
+        >
+          <li class="gap-4 flex flex-col">
+            <h4 class="text-h4 font-medium">Real-life training program</h4>
+            <p class="text-textSecondary text-lg">
+              The learning curve at Appscycloneis straight to the point, close
+              to the actual requirements, communicated from experienced and
+              dedicated instructors.
+            </p>
+          </li>
+          <li class="gap-4 flex flex-col">
+            <h4 class="text-h4 font-medium">Companion and support 24/7</h4>
+            <p class="text-textSecondary text-lg">
+              Instructors, mentors and students are a cohesive team, together
+              supporting, connecting and helping each other throughout the
+              learning and career development process.
+            </p>
+          </li>
+          <li class="gap-4 flex flex-col">
+            <h4 class="text-h4 font-medium">
+              Put the word "Mind" in everything
+            </h4>
+            <p class="text-textSecondary text-lg">
+              The mind of the teacher, together with the enthusiasm of the
+              learners, will be successful on the career path of each of us.
+            </p>
+          </li>
+          <li class="gap-4 flex flex-col">
+            <h4 class="text-h4 font-medium">Various forms of learning</h4>
+            <p class="text-textSecondary text-lg">
+              Study offline or online with offline through google meet, as well
+              as live & video courses with instructors, and mentor-supported
+              video lessons.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- FAQ -->
+      <section
+        class="flex flex-col md:flex-row md:px-40 px-2.5 md:h-[872px] py-40 justify-between animate-on-scroll"
+        data-animation="fadeIn"
+      >
+        <img
+          src="/src/assets/images/Vector.png"
+          class="-z-10 absolute left-0 animate-on-scroll"
+          data-animation="fadeInLeft"
+          alt="corner"
+        />
+
+        <h4 class="text-h3 text-[38px] font-bold md:w-[460px] mb-20 md:mb-0">
+          Frequently Asked Questions
+        </h4>
+        <ul class="md:w-[697px]">
+          <li
+            class="py-8 px-10 bg-secondaryBackground flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer hover:opacity-80 faq-item"
+          >
+            <div class="flex justify-between">
+              <span
+                class="text-textPrimary font-bold text-lg hover:text-primaryMain"
+              >
+                Can I get a job or internship after studying at Appscyclone?
+              </span>
+              <div class="hidden md:block">
+                <img src="/src/assets/icons/arrow-up.png" alt="arrow up" />
+                <img
+                  src="/src/assets/icons/arrow-down.png"
+                  class="hidden"
+                  alt="arrow down"
+                />
+              </div>
+            </div>
+            <p class="text-textSecondary text-lg pr-10">
+              The practical course at Appscyclone helps students experience the
+              projects, working processes and practical skills required to not
+              only apply for an internship, but also apply for higher official
+              positions such as in companies.
+            </p>
+          </li>
+          <li
+            class="py-8 px-10 flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer faq-item"
+          >
+            <div class="flex justify-between">
+              <span
+                class="text-textPrimary font-bold text-lg hover:text-primaryMain"
+              >
+                What should I do if I want to ask a question to the teacher?
+              </span>
+              <div class="hidden md:block">
+                <img
+                  src="/src/assets/icons/arrow-up.png"
+                  class="hidden"
+                  alt="arrow up"
+                />
+                <img src="/src/assets/icons/arrow-down.png" alt="arrow down" />
+              </div>
+            </div>
+            <p class="text-textSecondary text-lg pr-10 hidden">
+              The practical course at Appscyclone helps students experience the
+              projects, working processes and practical skills required to not
+              only apply for an internship, but also apply for higher official
+              positions such as in companies.
+            </p>
+          </li>
+          <li
+            class="py-8 px-10 flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer faq-item"
+          >
+            <div class="flex justify-between">
+              <span
+                class="text-textPrimary font-bold text-lg hover:text-primaryMain"
+              >
+                How to study at Appscyclone most effectively?
+              </span>
+              <div class="hidden md:block">
+                <img
+                  src="/src/assets/icons/arrow-up.png"
+                  class="hidden"
+                  alt="arrow up"
+                />
+                <img src="/src/assets/icons/arrow-down.png" alt="arrow down" />
+              </div>
+            </div>
+            <p class="text-textSecondary text-lg pr-10 hidden">
+              The practical course at Appscyclone helps students experience the
+              projects, working processes and practical skills required to not
+              only apply for an internship, but also apply for higher official
+              positions such as in companies.
+            </p>
+          </li>
+          <li
+            class="py-8 px-10 flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer faq-item"
+          >
+            <div class="flex justify-between">
+              <span
+                class="text-textPrimary font-bold text-lg hover:text-primaryMain"
+              >
+                Do you record a video after each lesson to review?
+              </span>
+              <div class="hidden md:block">
+                <img
+                  src="/src/assets/icons/arrow-up.png"
+                  class="hidden"
+                  alt="arrow up"
+                />
+                <img src="/src/assets/icons/arrow-down.png" alt="arrow down" />
+              </div>
+            </div>
+            <p class="text-textSecondary text-lg pr-10 hidden">
+              The practical course at Appscyclone helps students experience the
+              projects, working processes and practical skills required to not
+              only apply for an internship, but also apply for higher official
+              positions such as in companies.
+            </p>
+          </li>
+          <li
+            class="py-8 px-10 flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer faq-item"
+          >
+            <div class="flex justify-between">
+              <span
+                class="text-textPrimary font-bold text-lg hover:text-primaryMain"
+              >
+                How to register for a course at Appscyclone?
+              </span>
+              <div class="hidden md:block">
+                <img
+                  src="/src/assets/icons/arrow-up.png"
+                  class="hidden"
+                  alt="arrow up"
+                />
+                <img src="/src/assets/icons/arrow-down.png" alt="arrow down" />
+              </div>
+            </div>
+            <p class="text-textSecondary text-lg pr-10 hidden">
+              The practical course at Appscyclone helps students experience the
+              projects, working processes and practical skills required to not
+              only apply for an internship, but also apply for higher official
+              positions such as in companies.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section
+        class="md:px-40 md:mb-40 pb-40 md:pb-0 px-2.5 animate-on-scroll"
+        data-animation="fadeIn"
+      >
+        <h4 class="text-h3 text-[38px] font-bold mb-20">Recommended Courses</h4>
+
+        <div
+          class="flex flex-col md:flex-row gap-10 items-center justify-center"
+          id="recommended-courses"
+        ></div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="md:h-[534px] md:px-40 px-2.5 flex flex-col relative pt-20 pb-10 md:pb-0"
+    >
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div
+          class="md:w-[427px] flex flex-col gap-8 items-center md:items-start"
+        >
+          <img src="/src/assets/images/logo.png" alt="logo" />
+          <h2
+            class="text-[32px] leading-[44.8px] font-medium text-center md:text-start"
+          >
+            Wanna learn with us? <br />
+            Get in touch
+          </h2>
+          <button
+            class="rounded-[40px] p-4 bg-tertiaryBackground text-white w-[199px] hover:bg-primaryMain mb-8 md:mb-0"
+          >
+            Registered
+          </button>
+        </div>
+        <div
+          class="flex flex-col md:flex-row text-center md:text-start justify-between gap-10 md:w-[543px]"
+        >
+          <ul class="flex-1 flex flex-col gap-4">
+            <li class="font-bold text-textPrimary text-lg">Navigation</li>
+            <li
+              class="text-textSecondary hover:text-primaryMain cursor-pointer"
+            >
+              <a href="/" class="no-underline"> Home </a>
+            </li>
+            <li
+              class="text-textSecondary hover:text-primaryMain cursor-pointer"
+            >
+              <a href="/src/pages/courses.html" class="no-underline">
+                Course
+              </a>
+            </li>
+          </ul>
+          <ul class="flex-1 flex flex-col gap-4">
+            <li class="font-bold text-textPrimary text-lg">Head Office</li>
+            <li
+              class="text-textSecondary hover:text-primaryMain cursor-pointer"
+            >
+              168/6 Bui Thi Xuan Street, <br />
+              Ward 3, Tan Binh District, <br />
+              Ho Chi Minh City, Vietnam
+            </li>
+            <li class="flex gap-6 justify-center md:justify-start">
+              <img
+                src="/src/assets/images/Twitter.png"
+                alt="Twitter"
+                class="cursor-pointer hover:scale-105"
+              />
+              <img
+                src="/src/assets/images/Whatsapp.png"
+                alt="Whatsapp"
+                class="cursor-pointer hover:scale-105"
+              />
+              <img
+                src="/src/assets/images/Facebook.png"
+                alt="Facebook"
+                class="cursor-pointer hover:scale-105"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p
+        class="text-textSecondary text-center md:text-start md:absolute md:bottom-10 mt-5 md:mt-0"
+      >
+        Copyright © 2023. All rights reserved.
+      </p>
+    </footer>
+
+    <script type="module" src="/src/courseDetails.ts"></script>
+  </body>
+</html>

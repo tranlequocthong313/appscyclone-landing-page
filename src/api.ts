@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export const API_ENDPOINTS = {
     courses: 'courses',
-    courseDetail: (id: string) => 'courses/' + id,
+    courseDetail: (id: string) => 'courses/?id=' + id,
     evaluations: 'evaluations'
 }
 

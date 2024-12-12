@@ -57,7 +57,7 @@ function renderCourse(course: Course) {
                       <h5 class="text-h4 font-medium">${course.name}</h5>
                     </div>
                     <div class="flex items-center gap-2">
-                      <img src="${teacher.avatar}" alt="avatar" />
+                      <img src="${teacher.avatar}" alt="avatar" class="rounded-full w-10 h-10" />
                       <p class="text-textSecondary">${teacher.name}</p>
                     </div>
                   </div>
@@ -81,7 +81,9 @@ function renderCourse(course: Course) {
                   <button
                     class="bg-transparent text-textPrimary rounded-[40px] py-4 px-6 w-full md:w-[220px] border border-tertiaryBackground font-bold hover:border-primaryMain hover:text-primaryMain animate__animated animate__fadeInUp animate__delay-2s transition-transform duration-300 ease-in-out"
                   >
-                    See details
+                    <a class="block w-full h-full" href="/src/pages/course-details?id=${course.id}">
+                      See details
+                    </a>
                   </button>
                 </div>
               </div>
@@ -95,34 +97,38 @@ function renderCourses(courses: Course[]) {
   for (const course of courses) {
     const teacher = course.lecturers.find(lecturer => lecturer.isTeacher) || course.lecturers[0]
 
-    const element = `<div
+    const element = `
+          <div
             class="relative animate-on-scroll hover:!scale-105 cursor-pointer"
             data-animation="fadeIn"
           >
-            <img src="${course.image}" alt="${course.name}" />
-            <div
-              class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
-            >
-              ${course.learningForm}
-            </div>
-            <div class="p-10 flex flex-col gap-4 bg-secondaryBackground">
-              <div class="flex flex-col gap-2">
-                <p class="text-sm leading-6 text-textSecondary">${course.type}</p>
-                <h5 class="text-textPrimary text-2xl leading-9 font-bold">
-                  ${course.name}
-                </h5>
+            <a href="/src/pages/course-details?id=${course.id}">
+              <img src="${course.image}" alt="${course.name}" />
+              <div
+                class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
+              >
+                ${course.learningForm}
               </div>
-              <div class="flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                  <img src="${teacher.avatar}" alt="${teacher.name}" />
-                  <span>${teacher.name}</span>
+              <div class="p-10 flex flex-col gap-4 bg-secondaryBackground">
+                <div class="flex flex-col gap-2">
+                  <p class="text-sm leading-6 text-textSecondary">${course.type}</p>
+                  <h5 class="text-textPrimary text-2xl leading-9 font-bold">
+                    ${course.name}
+                  </h5>
                 </div>
-                <span class="text-textPrimary font-bold text-xl"
-                  >${course.price}</span
-                >
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <img src="${teacher.avatar}" alt="${teacher.name}" class="w-10 h-10 rounded-full" />
+                    <span>${teacher.name}</span>
+                  </div>
+                  <span class="text-textPrimary font-bold text-xl"
+                    >${course.price}đ</span
+                  >
+                </div>
               </div>
-            </div>
-          </div>`
+            </a>
+          </div>
+      `
 
     courseList.innerHTML += element
   }
