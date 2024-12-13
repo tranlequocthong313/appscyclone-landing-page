@@ -13,13 +13,6 @@ const evaluationElement = document.querySelector("#evaluation")!
 const faqItems = document.querySelectorAll(".faq-item")
 
 
-// Handle Navbar Menu On Small Screen Device
-document.getElementById("menuToggle")!.addEventListener("click", function () {
-  const menu = document.getElementById("menu")!
-  menu.classList.toggle("hidden")
-})
-
-
 // Handle Coming Course & All Courses Section
 document.addEventListener("DOMContentLoaded", async () => {
   const courses = await fetchCourses()
@@ -250,40 +243,16 @@ document.addEventListener("DOMContentLoaded", () => {
     faqItem.addEventListener("click", () => {
       const isOpen = !faqItem.getElementsByTagName("p")[0].classList.contains("hidden")
       if (isOpen) {
-        faqItem.classList.remove("bg-secondaryBackground")
+        faqItem.classList.remove("faq-item--active")
         faqItem.getElementsByTagName("img")[0].classList.add("hidden")
         faqItem.getElementsByTagName("img")[1].classList.remove("hidden")
         faqItem.getElementsByTagName("p")[0].classList.add("hidden")
       } else {
-        faqItem.classList.add("bg-secondaryBackground")
+        faqItem.classList.add("faq-item--active")
         faqItem.getElementsByTagName("img")[0].classList.remove("hidden")
         faqItem.getElementsByTagName("img")[1].classList.add("hidden")
         faqItem.getElementsByTagName("p")[0].classList.remove("hidden")
       }
     })
   }
-})
-
-
-// Handle animation on scroll to
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll<HTMLElement>(".animate-on-scroll")
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const target = entry.target as HTMLElement
-
-      if (entry.isIntersecting) {
-        const animation = target.dataset.animation
-
-        if (animation) {
-          target.classList.add("animate__animated", "animate__" + animation)
-        }
-
-        observer.unobserve(target)
-      }
-    })
-  })
-
-  sections.forEach((section) => observer.observe(section))
 })

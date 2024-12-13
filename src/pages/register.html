@@ -87,23 +87,19 @@
 
         <form class="flex flex-wrap flex-col gap-6" id="form">
           <div class="flex flex-col md:flex-row gap-10 basis-full">
-            <div class="flex flex-col gap-4 basis-1/2">
-              <label class="font-bold text-textPrimary" for="name">Name</label>
+            <div class="register__input-container">
+              <label for="name">Name</label>
               <input
                 id="name"
                 name="name"
                 type="text"
                 placeholder="Enter name"
-                class="rounded-lg font-medium border py-5 px-4 text-textSecondary text-[14px] border-gray-4 focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
               />
             </div>
 
-            <div class="flex flex-col gap-4 basis-1/2">
-              <label for="email" class="font-bold text-textPrimary"
-                >Email</label
-              >
+            <div class="register__input-container">
+              <label for="email">Email</label>
               <input
-                class="rounded-lg font-medium border border-gray-4 py-5 px-4 text-textSecondary text-[14px] focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
                 id="email"
                 name="email"
                 type="text"
@@ -113,12 +109,9 @@
           </div>
 
           <div class="flex flex-col md:flex-row gap-10 basis-full">
-            <div class="flex flex-col gap-4 basis-1/2">
-              <label class="font-bold text-textPrimary" for="phone"
-                >Phone</label
-              >
+            <div class="register__input-container">
+              <label for="phone">Phone</label>
               <input
-                class="rounded-lg font-medium border border-gray-4 py-5 px-4 text-textSecondary text-[14px] focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
                 id="phone"
                 name="phone"
                 type="text"
@@ -126,15 +119,13 @@
               />
             </div>
 
-            <div class="flex flex-col gap-4 basis-1/2">
-              <label for="learning-form" class="font-bold text-textPrimary"
-                >Learning form</label
-              >
+            <div class="register__input-container">
+              <label for="learning-form">Learning form</label>
               <div class="relative w-full">
                 <select
                   id="learning-form"
                   name="learning-form"
-                  class="rounded-lg w-full font-medium border border-gray-4 py-5 px-4 text-textPrimary bg-white text-[14px] cursor-pointer focus:outline-none focus:ring-2 focus:ring-tertiaryBackground appearance-none"
+                  class="w-full text-textPrimary bg-white cursor-pointer appearance-none"
                 >
                   <option class="text-textPrimary font-medium" value="offline">
                     Learn offline
@@ -152,12 +143,9 @@
             </div>
           </div>
 
-          <div class="basis-full flex flex-col gap-4">
-            <label class="font-bold text-textPrimary" for="fb-url"
-              >Facebook URL</label
-            >
+          <div class="basis-full register__input-container">
+            <label for="fb-url">Facebook URL</label>
             <input
-              class="rounded-lg font-medium border border-gray-4 py-5 px-4 text-textSecondary text-[14px] focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
               id="fb-url"
               name="fb-url"
               type="text"
@@ -165,12 +153,9 @@
             />
           </div>
 
-          <div class="basis-full flex flex-col gap-4">
-            <label class="font-bold text-textPrimary" for="opinion"
-              >Personal opinion</label
-            >
+          <div class="basis-full register__input-container">
+            <label for="opinion">Personal opinion</label>
             <textarea
-              class="rounded-lg font-medium border border-gray-4 py-5 px-4 text-textSecondary text-[14px] focus:outline-none focus:ring-2 focus:ring-tertiaryBackground"
               id="opinion"
               name="opinion"
               rows="4"
@@ -266,5 +251,6 @@
     </footer>
 
     <script type="module" src="/src/register.ts"></script>
+    <script type="module" src="/src/utils.ts"></script>
   </body>
 </html>

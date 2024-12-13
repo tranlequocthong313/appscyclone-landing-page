@@ -28,13 +28,6 @@ const requirements = document.querySelector("#required-requirements")!
 const lectureList = document.querySelector("#lectures")!
 
 
-// Handle Navbar Menu On Small Screen Device
-document.getElementById("menuToggle")!.addEventListener("click", function () {
-  const menu = document.getElementById("menu")!
-  menu.classList.toggle("hidden")
-})
-
-
 // Handle Course Details
 document.addEventListener("DOMContentLoaded", async () => {
   const courseDetails = await fetchCourseDetails()
@@ -211,12 +204,12 @@ document.addEventListener("DOMContentLoaded", () => {
     faqItem.addEventListener("click", () => {
       const isOpen = !faqItem.getElementsByTagName("p")[0].classList.contains("hidden")
       if (isOpen) {
-        faqItem.classList.remove("bg-secondaryBackground")
+        faqItem.classList.remove("faq-item--active")
         faqItem.getElementsByTagName("img")[0].classList.add("hidden")
         faqItem.getElementsByTagName("img")[1].classList.remove("hidden")
         faqItem.getElementsByTagName("p")[0].classList.add("hidden")
       } else {
-        faqItem.classList.add("bg-secondaryBackground")
+        faqItem.classList.add("faq-item--active")
         faqItem.getElementsByTagName("img")[0].classList.remove("hidden")
         faqItem.getElementsByTagName("img")[1].classList.add("hidden")
         faqItem.getElementsByTagName("p")[0].classList.remove("hidden")
@@ -251,7 +244,7 @@ function renderRecommendedCourses(courses: Course[]) {
             class="relative animate-on-scroll hover:!scale-105 cursor-pointer"
             data-animation="fadeIn"
           >
-            <a>
+            <a href="/src/pages/course-details.html?id=${course.id}">
               <img
                 src="${course.image}"
                 alt="${course.name}"
@@ -290,27 +283,3 @@ function renderRecommendedCourses(courses: Course[]) {
     recommendedCourses.innerHTML += element
   }
 }
-
-
-// Handle animation on scroll to
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll<HTMLElement>(".animate-on-scroll")
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const target = entry.target as HTMLElement
-
-      if (entry.isIntersecting) {
-        const animation = target.dataset.animation
-
-        if (animation) {
-          target.classList.add("animate__animated", "animate__" + animation)
-        }
-
-        observer.unobserve(target)
-      }
-    })
-  })
-
-  sections.forEach((section) => observer.observe(section))
-})

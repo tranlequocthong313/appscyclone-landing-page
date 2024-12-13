@@ -12,21 +12,14 @@ const totalItem = document.querySelector("#total-items")!
 const paginationList = document.querySelector("#pagination-list")!
 
 
-// Handle Navbar Menu On Small Screen Device
-document.getElementById("menuToggle")!.addEventListener("click", function () {
-  const menu = document.getElementById("menu")!
-  menu.classList.toggle("hidden")
-})
-
-
 // Handle Course Filter
 document.addEventListener("DOMContentLoaded", () => {
   const type = (new URLSearchParams(window.location.search)).get("type") || "All"
   for (const filterItem of filterItems) {
     if (filterItem.innerHTML.includes(type)) {
-      filterItem.classList.add("text-white", "bg-tertiaryBackground")
+      filterItem.classList.add("filter-item--active")
     } else {
-      filterItem.classList.remove("text-white", "bg-tertiaryBackground")
+      filterItem.classList.remove("filter-item--active")
     }
   }
 })
@@ -185,27 +178,3 @@ function renderCourses(courses: Course[]) {
     courseList.innerHTML += element
   }
 }
-
-
-// Handle animation on scroll to
-document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll<HTMLElement>(".animate-on-scroll")
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const target = entry.target as HTMLElement
-
-      if (entry.isIntersecting) {
-        const animation = target.dataset.animation
-
-        if (animation) {
-          target.classList.add("animate__animated", "animate__" + animation)
-        }
-
-        observer.unobserve(target)
-      }
-    })
-  })
-
-  sections.forEach((section) => observer.observe(section))
-})

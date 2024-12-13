@@ -2,8 +2,184 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Centra No2';
+  src: url('./assets/fonts/centrano_regular/Centra No2/Centra No2.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centra No2';
+  src: url('./assets/fonts/centrano2_bold/Centra No2 Bold/Centra No2 Bold.woff2')
+    format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centra No2';
+  src: url('./assets/fonts/centrano2_italic/Centra No2 Italic/Centra No2 Italic.woff2')
+    format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Centra No2';
+  src: url('./assets/fonts/centrano2_thin/Centra No2 Thin/Centra No2 Thin.woff2')
+    format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centra No2';
+  src: url('./assets/fonts/centrano2_light/Centra No2 Light/Centra No2 Light.woff2')
+    format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centra No2';
+  src: url('./assets/fonts/centrano2_black/Centra No2 Black/Centra No2 Black.woff2')
+    format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centra No2';
+  src: url('./assets/fonts/centrano2_medium/Centra No2 Medium/Centra No2 Medium.woff2')
+    format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centra No2';
+  src: url('./assets/fonts/centrano2_extrabold/Centra No2 Extrabold/Centra No2 Extrabold.woff2')
+    format('woff2');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Centra No2';
+  src: url('./assets/fonts/centrano2_hairline/Centra No2 Hairline/Centra No2 Hairline.woff2')
+    format('woff2');
+  font-weight: 50;
+  font-style: normal;
+}
+
 @layer base {
   * {
     @apply transition-colors duration-300;
+  }
+
+  html {
+    font-family: 'Centra No2';
+  }
+}
+
+@layer components {
+  /* ============ Index ============ */
+  /* Team */
+  .team-item {
+    @apply relative hover:scale-105 cursor-pointer w-[310px] !flex justify-center md:justify-start;
+  }
+
+  .team-item__background {
+    @apply bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-5 md:left-0 right-0;
+  }
+
+  .team-item__badge {
+    @apply absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20 left-5 md:left-0 text-textPrimary;
+  }
+
+  .team-item__badge > h5 {
+    @apply text-h5 font-bold;
+  }
+
+  /* Special Value */
+  .special-value-item {
+    @apply gap-4 flex flex-col;
+  }
+
+  .special-value-item > h4 {
+    @apply text-h4 font-medium;
+  }
+
+  .special-value-item > p {
+    @apply text-textSecondary text-lg;
+  }
+
+  /* FAQ */
+  .faq-item {
+    @apply py-8 px-10 flex flex-col gap-4 border-b border-secondaryBackground cursor-pointer hover:opacity-80;
+  }
+
+  .faq-item--active {
+    @apply bg-secondaryBackground;
+  }
+
+  .faq-item__header {
+    @apply flex justify-between;
+  }
+
+  .faq-item__header > span {
+    @apply text-textPrimary font-bold text-lg hover:text-primaryMain;
+  }
+
+  .faq-item__header > div {
+    @apply hidden md:block;
+  }
+
+  .faq-item > p {
+    @apply text-textSecondary text-lg pr-10 hidden;
+  }
+
+  .faq-item--active > p {
+    @apply text-textSecondary text-lg pr-10 block;
+  }
+
+  /* ============ Courses ============ */
+  /* Filter */
+  .filter-item {
+    @apply px-4 py-2.5 flex-1 hover:opacity-80 hover:bg-tertiaryBackground hover:text-white;
+  }
+
+  .filter-item > a {
+    @apply block w-full h-full;
+  }
+
+  .filter-item--active {
+    @apply text-white bg-tertiaryBackground;
+  }
+
+  /* ============ Register ============ */
+  /* Form */
+  .register__input-container {
+    @apply flex flex-col gap-4 basis-1/2;
+  }
+
+  .register__input-container > label {
+    @apply font-bold text-textPrimary;
+  }
+
+  .register__input-container > input,
+  select,
+  textarea {
+    @apply rounded-lg font-medium border py-5 px-4 text-textSecondary text-[14px] border-gray-4 focus:outline-none focus:ring-2 focus:ring-tertiaryBackground;
+  }
+
+  .register__input-container--invalid > input {
+    @apply border-danger border-2;
+  }
+
+  .register__input-container--invalid > label {
+    @apply text-danger;
   }
 }
