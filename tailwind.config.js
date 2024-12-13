@@ -52,6 +52,15 @@ export default {
         danger: '#EF4444',
       },
     },
+    keyframes: {
+      'skeleton-loading': {
+        '0%': { backgroundColor: '#71738B' },
+        '100%': { backgroundColor: '#0D0F35' },
+      },
+    },
+    animation: {
+      'skeleton-loading': 'skeleton-loading 1s linear infinite alternate',
+    },
   },
   plugins: [],
 };

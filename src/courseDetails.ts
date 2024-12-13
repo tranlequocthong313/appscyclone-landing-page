@@ -10,15 +10,6 @@ const faqItems = document.querySelectorAll(".faq-item")!
 const recommendedCourses = document.querySelector("#recommended-courses")!
 
 // Course Details Elements
-const courseType = document.querySelector("#course-type")!
-const courseName = document.querySelector("#course-name")!
-const openingDay = document.querySelector("#opening-day")!
-const timeLimit = document.querySelector("#time-limit")!
-const learningForm = document.querySelector("#learning-form")!
-const teacherAvatar = document.querySelector("#teacher-avatar")!
-const teacherName = document.querySelector("#teacher-name")!
-const price = document.querySelector("#price")!
-const thumbnail = document.querySelector("#course-thumbnail") as HTMLImageElement
 const scheduleOpeningDay = document.querySelector("#schedule__opening-day")!
 const time = document.querySelector("#schedule__time")!
 const address = document.querySelector("#schedule__address")!
@@ -26,13 +17,73 @@ const schoolDays = document.querySelector("#schedule__school-days")!
 const contentList = document.querySelector("#content-list")!
 const requirements = document.querySelector("#required-requirements")!
 const lectureList = document.querySelector("#lectures")!
+const generalInfo = document.querySelector("#general-info")!
 
 
 // Handle Course Details
 document.addEventListener("DOMContentLoaded", async () => {
+  renderSkeletonCourseDetails()
   const courseDetails = await fetchCourseDetails()
   renderCourseDetails(courseDetails[0])
 })
+
+function renderSkeletonCourseDetails() {
+  const element = `
+          <div
+            class="flex flex-col w-full gap-20 animate__animated animate__fadeIn"
+          >
+            <div class="flex flex-col gap-6 lg:gap-10 lg:p-10">
+              <div class="flex flex-col gap-4">
+                <div class="lg:gap-1 flex flex-col lg:mb-16">
+                  <div class="skeleton skeleton-text"></div>
+                  <div
+                    class="skeleton skeleton-text"
+                  ></div>
+                </div>
+
+                <div
+                  class="flex flex-col lg:flex-row gap-8 lg:gap-14 text-center lg:text-start"
+                >
+                  <div class="flex flex-col gap-4 flex-1">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                  </div>
+                  <div class="flex flex-col gap-4 flex-1">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                  </div>
+                  <div class="flex flex-col gap-4 flex-1">
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col lg:flex-row gap-6 items-center p-6"
+              >
+                <div class="flex items-center gap-2">
+                  <div
+                    class="w-10 h-10 skeleton rounded-full"
+                  ></div>
+                </div>
+                <div
+                  class="skeleton skeleton-text"
+                ></div>
+              </div>
+
+              <button
+                class="rounded-[40px] py-4 px-10 transition-transform duration-300 ease-in-out lg:w-[233px] h-14 w-full skeleton"
+              >
+              </button>
+            </div>
+          </div>
+          <div
+            class="hidden lg:block skeleton min-w-[543px] h-[543px]"
+          ></div>
+  `
+  generalInfo.innerHTML += element
+}
 
 async function fetchCourseDetails() {
   try {
@@ -50,15 +101,72 @@ function renderCourseDetails(course: Course) {
   const teacher = course.lecturers.find(lecturer => lecturer.isTeacher)!
 
   // General Info Section
-  courseType.innerHTML = course.type
-  courseName.innerHTML = course.name
-  openingDay.innerHTML = course.schedule.openingDay
-  timeLimit.innerHTML = course.schedule.time
-  learningForm.innerHTML = course.learningForm
-  teacherAvatar.innerHTML = teacher.avatar
-  teacherName.innerHTML = teacher.name
-  price.innerHTML = course.price + " VND"
-  thumbnail.src = course.image
+  generalInfo.innerHTML = ''
+  const element = `
+          <div
+            class="flex flex-col w-full gap-20 animate__animated animate__fadeIn"
+          >
+            <div class="flex flex-col gap-6 lg:gap-10 lg:p-10">
+              <div class="flex flex-col gap-4">
+                <div class="lg:gap-1 flex flex-col lg:mb-16">
+                  <p class="text-textSecondary text-lg" id="course-type">${course.type}</p>
+                  <h4
+                    class="text-h3 md:text-h2 font-bold text-[64px] leading-[89.6px]"
+                    id="course-name"
+                  >${course.name}</h4>
+                </div>
+
+                <div
+                  class="flex flex-col lg:flex-row gap-8 lg:gap-14 text-center lg:text-start"
+                >
+                  <div class="flex flex-col gap-4">
+                    <p class="text-textSecondary">Opening day</p>
+                    <h5 class="text-h5 font-bold" id="opening-day">${course.schedule.openingDay}</h5>
+                  </div>
+                  <div class="flex flex-col gap-4">
+                    <p class="text-textSecondary">Time limit</p>
+                    <h5 class="text-h5 font-bold" id="time-limit">${course.schedule.time}</h5>
+                  </div>
+                  <div class="flex flex-col gap-4">
+                    <p class="text-textSecondary">Learning form</p>
+                    <h5 class="text-h5 font-bold" id="learning-form">${course.learningForm}</h5>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col lg:flex-row gap-6 bg-white justify-between items-center p-6"
+              >
+                <div class="flex items-center gap-2">
+                  <img
+                    src="${teacher.avatar}"
+                    alt="avatar"
+                    class="w-10 h-10"
+                    id="teacher-avatar"
+                  />
+                  <p class="text-textSecondary" id="teacher-name">${teacher.name}</p>
+                </div>
+                <span
+                  class="text-textPrimary font-bold text-xl"
+                  id="price"
+                >${course.price} VND</span>
+              </div>
+
+              <button
+                class="bg-tertiaryBackground text-white rounded-[40px] py-4 px-10 font-bold hover:bg-primaryMain transition-transform duration-300 ease-in-out lg:w-[233px] w-full"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+          <img
+            class="hidden lg:block"
+            alt="React"
+            id="course-thumbnail"
+            src="${course.image}"
+          /> 
+  `
+  generalInfo.innerHTML = element
 
   // Schedule Section
   scheduleOpeningDay.innerHTML = course.schedule.openingDay
@@ -66,7 +174,7 @@ function renderCourseDetails(course: Course) {
   address.innerHTML = course.schedule.address
   for (const day of course.schedule.schoolDay) {
     const element = `
-      <li class="text-h5 font-bold">
+      <li class="text-h6 md:text-h5 font-bold">
         ${day.name}: ${day.days.join(", ")}
       </li>
     `
@@ -96,7 +204,7 @@ function renderCourseDetails(course: Course) {
         </div>
 
         <ul
-          class="text-textSecondary text-lg px-4 list-disc flex flex-col gap-2 ${index === 0 ? "" : "hidden"}"
+          class="text-textSecondary text-base md:text-lg px-4 list-disc flex flex-col gap-2 ${index === 0 ? "" : "hidden"}"
         >
           ${content.lessonContent.map(title => `<li>${title}</li>`).join("")}
         </ul>
@@ -132,7 +240,7 @@ function renderCourseDetails(course: Course) {
           alt="check select"
           class="w-6 h-6"
         />
-        <p class="text-lg text-textSecondary">
+        <p class="text-base md:text-lg text-textSecondary">
           ${requirement}
         </p>
       </li> 
@@ -164,7 +272,7 @@ function renderCourseDetails(course: Course) {
                   ${lecturer.name}
                 </h5>
               </div>
-              <p class="text-lg text-textSecondary">
+              <p class="md:text-lg text-textSecondary text-base">
                 ${lecturer.bio}
               </p>
               <p class="underline text-lg text-textSecondary">
@@ -259,7 +367,7 @@ function renderRecommendedCourses(courses: Course[]) {
               >
                 ${course.learningForm}
               </div>
-              <div class="p-10 flex flex-col gap-4 bg-secondaryBackground">
+              <div class="p-5 md:p-10 flex flex-col gap-4 bg-secondaryBackground">
                 <div class="flex flex-col gap-2">
                   <p class="text-[14px] text-textSecondary">${course.type}</p>
                   <h5 class="text-textPrimary text-2xl leading-9 font-bold">

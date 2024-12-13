@@ -82,8 +82,9 @@
       <section class="mb-20 lg:px-40 px-2.5">
         <div
           class="flex lg:gap-40 items-center justify-center relative w-full lg:p-20 lg:bg-secondaryBackground"
+          id="general-info"
         >
-          <div
+          <!-- <div
             class="flex flex-col w-full gap-20 animate__animated animate__fadeInUp animate__delay-1s"
           >
             <div class="flex flex-col gap-6 lg:gap-10 lg:p-10">
@@ -144,7 +145,7 @@
             data-animation="zoomIn"
             alt="React"
             id="course-thumbnail"
-          />
+          /> -->
         </div>
       </section>
 
@@ -156,7 +157,7 @@
         <div class="flex flex-col lg:flex-row gap-10">
           <div class="flex flex-col gap-4 lg:w-[660px]">
             <h4 class="text-h4 text-textPrimary font-medium">Introduce</h4>
-            <p class="text-lg text-textSecondary">
+            <p class="text-base md:text-lg text-textSecondary">
               This FRONTEND MASTER PROGRAMMING course is suitable for those of
               you who are IT students or those who want to become a
               comprehensive Front-end Dev to work in companies. After the
@@ -175,7 +176,9 @@
         <div class="flex gap-10 flex-col lg:flex-row">
           <img src="/src/assets/images/video.png" alt="video" />
           <div class="flex flex-col gap-4 lg:w-[660px]">
-            <div class="text-textSecondary text-lg flex flex-col gap-6">
+            <div
+              class="text-textSecondary text-base md:text-lg flex flex-col gap-6"
+            >
               <p>The Frontend Master course is divided into 3 main phases:</p>
               <p>
                 - <strong>Frontend Newbie: </strong>6 week duration (2
@@ -210,16 +213,25 @@
             <div class="flex flex-col lg:flex-row">
               <div class="p-10 flex flex-col gap-4 border border-gay-2 flex-1">
                 <p class="text-textSecondary">Opening day</p>
-                <h5 id="schedule__opening-day" class="text-h5 font-bold"></h5>
+                <h5
+                  id="schedule__opening-day"
+                  class="text-h6 md:text-h5 font-bold"
+                ></h5>
               </div>
               <div class="p-10 flex flex-col gap-4 border border-gay-2 flex-1">
                 <p class="text-textSecondary">Time</p>
-                <h5 id="schedule__time" class="text-h5 font-bold"></h5>
+                <h5
+                  id="schedule__time"
+                  class="text-h6 md:text-h5 font-bold"
+                ></h5>
               </div>
             </div>
             <div class="p-10 flex flex-col gap-4 border border-gay-2">
               <p class="text-textSecondary">Address</p>
-              <h5 class="text-h5 font-bold" id="schedule__address"></h5>
+              <h5
+                class="text-h6 md:text-h5 font-bold"
+                id="schedule__address"
+              ></h5>
             </div>
           </div>
           <div class="p-10 flex flex-col gap-4 border border-gay-2 flex-1">
@@ -253,7 +265,7 @@
 
       <!-- Lectures -->
       <section
-        class="lg:px-40 mb-40 px-2.5 animate-on-scroll"
+        class="lg:px-40 mb-24 px-2.5 animate-on-scroll"
         data-animation="fadeIn"
       >
         <h4 class="text-h4 font-medium mt-20 mb-16">Lectures</h4>
@@ -283,7 +295,7 @@
 
       <!-- Special Value -->
       <section
-        class="px-2.5 lg:px-40 flex flex-col lg:flex-row bg-secondaryBackground relative lg:h-[896px] pt-40 animate-on-scroll"
+        class="px-2.5 lg:px-40 flex flex-col lg:flex-row bg-secondaryBackground relative lg:h-[896px] pt-24 animate-on-scroll"
         data-animation="fadeIn"
       >
         <div class="flex-1">
@@ -350,7 +362,9 @@
           alt="corner"
         />
 
-        <h4 class="text-h3 text-[38px] font-bold lg:w-[460px] mb-20 lg:mb-0">
+        <h4
+          class="text-h4 md:text-h3 text-[38px] font-bold lg:w-[460px] mb-20 lg:mb-0"
+        >
           Frequently Asked Questions
         </h4>
         <ul class="lg:w-[697px]">

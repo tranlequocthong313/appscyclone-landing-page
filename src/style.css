@@ -109,11 +109,11 @@
   }
 
   .special-value-item > h4 {
-    @apply text-h4 font-medium;
+    @apply text-h5 md:text-h4 font-medium;
   }
 
   .special-value-item > p {
-    @apply text-textSecondary text-lg;
+    @apply text-textSecondary text-base md:text-lg;
   }
 
   /* FAQ */
@@ -138,11 +138,11 @@
   }
 
   .faq-item > p {
-    @apply text-textSecondary text-lg pr-10 hidden;
+    @apply text-textSecondary text-base md:text-lg pr-10 hidden;
   }
 
   .faq-item--active > p {
-    @apply text-textSecondary text-lg pr-10 block;
+    @apply block;
   }
 
   /* ============ Courses ============ */
@@ -181,5 +181,17 @@
 
   .register__input-container--invalid > label {
     @apply text-danger;
+  }
+
+  .skeleton {
+    @apply opacity-70 animate-skeleton-loading;
+  }
+
+  .skeleton-text {
+    @apply w-full h-2 mb-1 rounded;
+  }
+
+  .skeleton-text:last-child {
+    @apply mb-0 w-4/5;
   }
 }

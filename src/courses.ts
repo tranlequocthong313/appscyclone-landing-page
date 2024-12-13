@@ -9,7 +9,9 @@ const DEFAULT_LIMIT = 9
 const courseList = document.querySelector("#courses")!
 const filterItems = document.querySelectorAll(".filter-item")!
 const totalItem = document.querySelector("#total-items")!
+const paginationSection = document.querySelector("#pagination-section")!
 const paginationList = document.querySelector("#pagination-list")!
+const noDataFoundImage = document.querySelector("#no-data-found-img")!
 
 
 // Handle Course Filter
@@ -27,12 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Handle Courses and Pagination Section
 document.addEventListener("DOMContentLoaded", async () => {
+  renderSkeletonCourses()
   const { data: courses, total = 0 } = await fetchCourses()
-  if (courses) {
+  if (courses.length > 0) {
     renderCourses(courses)
+    totalItem.innerHTML += total
+    renderPagination(Math.ceil(total / DEFAULT_LIMIT))
+  } else {
+    courseList.classList.add('hidden')
+    noDataFoundImage.classList.remove('hidden')
+    noDataFoundImage.classList.add('flex')
+    paginationSection.classList.add('hidden')
   }
-  totalItem.innerHTML += total
-  renderPagination(Math.ceil(total / DEFAULT_LIMIT))
 })
 
 function renderPagination(size: number, maxVisiblePages: number = 6) {
@@ -139,8 +147,34 @@ async function fetchCourses() {
   }
 }
 
+function renderSkeletonCourses() {
+  for (let i = 0; i < 9; i++) {
+    const element = `<li
+            class="relative animate-on-scroll cursor-pointer"
+            data-animation="fadeIn"
+          >
+            <img class="w-[427px] h-[427px] skeleton" />
+            <div class="p-10 flex flex-col gap-4">
+              <div class="flex flex-col gap-2">
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text">
+                </div>
+              </div>
+              <div class="flex justify-between items-center gap-2">
+                <img class="w-10 h-10 rounded-full skeleton" />
+                <div class="skeleton skeleton-text"></span>
+              </div>
+            </div>
+          </li>`
+
+    courseList.innerHTML += element
+  }
+}
+
 
 function renderCourses(courses: Course[]) {
+  courseList.innerHTML = ''
+
   for (const course of courses) {
     const teacher = course.lecturers.find(lecturer => lecturer.isTeacher) || course.lecturers[0]
 
