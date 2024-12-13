@@ -144,12 +144,12 @@ function renderCourses(courses: Course[]) {
   for (const course of courses) {
     const teacher = course.lecturers.find(lecturer => lecturer.isTeacher) || course.lecturers[0]
 
-    const element = `<div
+    const element = `<li
             class="relative animate-on-scroll hover:!scale-105 cursor-pointer"
             data-animation="fadeIn"
           >
             <a href="/src/pages/course-details.html?id=${course.id}">
-              <img src="${course.image}" alt="${course.name}" class="md:w-[427px] md:h-[427px]" />
+              <img src="${course.image}" alt="${course.name}" class="md:max-w-[427px] md:max-h-[427px]" />
               <div
                 class="absolute top-10 right-10 bg-primaryMain px-4 py-2 text-white"
               >
@@ -173,7 +173,7 @@ function renderCourses(courses: Course[]) {
                 </div>
               </div>
             </a>
-          </div>`
+          </li>`
 
     courseList.innerHTML += element
   }

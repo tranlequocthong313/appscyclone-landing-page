@@ -7,7 +7,7 @@ export const API_ENDPOINTS = {
 }
 
 const http = axios.create({
-    baseURL: 'http://localhost:3000/',
+    baseURL: 'https://wctcq9bl-3000.asse.devtunnels.ms/',
 })
 
 export default http

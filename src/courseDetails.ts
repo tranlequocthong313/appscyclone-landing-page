@@ -144,7 +144,7 @@ function renderCourseDetails(course: Course) {
   for (const lecturer of course.lecturers) {
     lectureList.innerHTML += `
           <li
-            class="relative animate-on-scroll hover:!scale-105 cursor-pointer swiper-slide !flex flex-col items-center md:items-start"
+            class="relative animate-on-scroll hover:!scale-105 cursor-pointer swiper-slide !flex flex-col items-center lg:items-start"
             data-animation="fadeIn"
           >
             <img
@@ -190,9 +190,13 @@ function renderCourseDetails(course: Course) {
     },
     breakpoints: {
       768: {
+        slidesPerView: 2,
+        speed: 1500,
+      },
+      1024: {
         slidesPerView: 4,
         speed: 1500,
-      }
+      },
     }
   })
 }
@@ -202,8 +206,8 @@ function renderCourseDetails(course: Course) {
 document.addEventListener("DOMContentLoaded", () => {
   for (const faqItem of faqItems) {
     faqItem.addEventListener("click", () => {
-      const isOpen = !faqItem.getElementsByTagName("p")[0].classList.contains("hidden")
-      if (isOpen) {
+      const p = faqItem.getElementsByTagName("p")[0]
+      if (p.checkVisibility()) {
         faqItem.classList.remove("faq-item--active")
         faqItem.getElementsByTagName("img")[0].classList.add("hidden")
         faqItem.getElementsByTagName("img")[1].classList.remove("hidden")

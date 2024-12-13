@@ -88,15 +88,15 @@
   /* ============ Index ============ */
   /* Team */
   .team-item {
-    @apply relative hover:scale-105 cursor-pointer w-[310px] !flex justify-center md:justify-start;
+    @apply relative hover:!scale-105 cursor-pointer w-[310px] !flex justify-center lg:justify-start;
   }
 
   .team-item__background {
-    @apply bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-5 md:left-0 right-0;
+    @apply bg-gray-2 w-[310px] h-[310px] -z-10 absolute bottom-0 left-5 lg:left-0 right-0;
   }
 
   .team-item__badge {
-    @apply absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20 left-5 md:left-0 text-textPrimary;
+    @apply absolute py-2 pl-8 pr-2 bottom-8 bg-white flex flex-col gap-2 w-60 h-20 left-5 lg:left-0 text-textPrimary;
   }
 
   .team-item__badge > h5 {
@@ -134,7 +134,7 @@
   }
 
   .faq-item__header > div {
-    @apply hidden md:block;
+    @apply hidden lg:block;
   }
 
   .faq-item > p {

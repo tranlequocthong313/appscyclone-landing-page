@@ -50,11 +50,11 @@ function renderCourse(courses: Course[]) {
 
     const element = `
             <div
-              class="!flex items-center w-full justify-center relative px-2.5 swiper-slide md:-left-20"
+              class="!flex items-center w-full justify-center relative px-2.5 swiper-slide lg:-left-20"
             >
               <img
                 src="${course.image}"
-                class="w-[427px] h-[427px] relative -left-24 hidden md:block"
+                class="w-[427px] h-[427px] relative -left-24 hidden lg:block"
                 alt="${course.name}"
               />
               <div
@@ -82,7 +82,7 @@ function renderCourse(courses: Course[]) {
                     </div>
                   </div>
                 </div>
-                <div class="flex gap-4 flex-col md:flex-row">
+                <div class="flex gap-4 flex-col lg:flex-row">
                   <button
                     class="bg-tertiaryBackground text-white rounded-[40px] py-4 px-10 font-bold hover:bg-primaryMain transition-transform duration-300 ease-in-out"
                   >
@@ -91,7 +91,7 @@ function renderCourse(courses: Course[]) {
                     </a>
                   </button>
                   <button
-                    class="bg-transparent text-textPrimary rounded-[40px] py-4 px-6 w-full md:w-[220px] border border-tertiaryBackground font-bold hover:border-primaryMain hover:text-primaryMain transition-transform duration-300 ease-in-out"
+                    class="bg-transparent text-textPrimary rounded-[40px] py-4 px-6 w-full lg:w-[220px] border border-tertiaryBackground font-bold hover:border-primaryMain hover:text-primaryMain transition-transform duration-300 ease-in-out"
                   >
                     <a class="block w-full h-full" href="/src/pages/course-details?id=${course.id}">
                       See details
@@ -165,9 +165,13 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     breakpoints: {
       768: {
+        slidesPerView: 2,
+        speed: 1500,
+      },
+      1024: {
         slidesPerView: 4,
         speed: 1500,
-      }
+      },
     }
   })
 })
@@ -207,7 +211,7 @@ function renderEvaluations(evaluations: Evaluation[]) {
   for (const evaluation of evaluations) {
     const element = `
       <div
-        class="p-8 border border-gray-4 w-full max-w-[426px] h-[426px] animate-on-scroll hover:scale-105 cursor-pointer swiper-slide"
+        class="p-8 border border-gray-4 w-full max-w-[426px] h-[426px] animate-on-scroll hover:!scale-105 cursor-pointer swiper-slide"
         data-animation="fadeIn"
       >
         <img
@@ -241,8 +245,8 @@ function renderEvaluations(evaluations: Evaluation[]) {
 document.addEventListener("DOMContentLoaded", () => {
   for (const faqItem of faqItems) {
     faqItem.addEventListener("click", () => {
-      const isOpen = !faqItem.getElementsByTagName("p")[0].classList.contains("hidden")
-      if (isOpen) {
+      const p = faqItem.getElementsByTagName("p")[0]
+      if (p.checkVisibility()) {
         faqItem.classList.remove("faq-item--active")
         faqItem.getElementsByTagName("img")[0].classList.add("hidden")
         faqItem.getElementsByTagName("img")[1].classList.remove("hidden")
