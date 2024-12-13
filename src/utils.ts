@@ -1,7 +1,10 @@
 // Handle Navbar Menu On Small Screen Device
-document.getElementById("menuToggle")!.addEventListener("click", function () {
+const menuToggle = document.getElementById("menuToggle")!
+menuToggle.addEventListener("click", function () {
     const menu = document.getElementById("menu")!
-    menu.classList.toggle("hidden")
+    menu.classList.toggle("collapsed")
+    menuToggle.querySelector("#open-menu")!.classList.toggle("hidden")
+    menuToggle.querySelector("#close-menu")!.classList.toggle("hidden")
 })
 
 

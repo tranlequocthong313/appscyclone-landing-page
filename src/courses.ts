@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 })
 
-function renderPagination(size: number, maxVisiblePages: number = 6) {
+function renderPagination(totalPages: number, maxVisiblePages: number = 6) {
   const query = new URLSearchParams(window.location.search)
   const currentPage = parseInt(query.get("page") || String(DEFAULT_PAGE))
 
@@ -60,28 +60,28 @@ function renderPagination(size: number, maxVisiblePages: number = 6) {
 
   const pages: (number | string)[] = []
 
-  if (size <= maxVisiblePages) {
-    for (let i = 1; i <= size; i++) {
+  if (totalPages <= maxVisiblePages) {
+    for (let i = 1; i <= totalPages; i++) {
       pages.push(i)
     }
   } else {
     pages.push(1)
     const halfRange = Math.floor(maxVisiblePages / 2)
-    const isOnHalf = currentPage > (halfRange + 2)
-    if (isOnHalf) {
+    const isGreaterThanHalf = currentPage > (halfRange + 2)
+    if (isGreaterThanHalf) {
       pages.push("...")
     }
     const start = Math.max(2, currentPage - halfRange)
-    const end = Math.min(size - 1, currentPage + halfRange)
+    const end = Math.min(totalPages - 1, currentPage + halfRange)
 
     for (let i = start; i <= end; i++) {
       pages.push(i)
     }
 
-    if (currentPage < size - halfRange - 1) {
+    if (currentPage < totalPages - halfRange - 1) {
       pages.push("...")
     }
-    pages.push(size)
+    pages.push(totalPages)
   }
 
   for (let page of pages) {
@@ -109,7 +109,7 @@ function renderPagination(size: number, maxVisiblePages: number = 6) {
 
   paginationList.innerHTML += `
     <li
-      class="bg-secondaryBackground w-10 h-10 flex items-center justify-center ${currentPage === size ? "opacity-50 pointer-events-none" : ""
+      class="bg-secondaryBackground w-10 h-10 flex items-center justify-center ${currentPage === totalPages ? "opacity-50 pointer-events-none" : ""
     }"
     >
       <a class="flex items-center justify-center w-full h-full hover:bg-primaryMain" href="?page=${currentPage + 1}">

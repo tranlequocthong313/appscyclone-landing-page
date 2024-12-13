@@ -33,6 +33,7 @@
           class="block lg:hidden text-textPrimary focus:outline-none"
         >
           <svg
+            id="open-menu"
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -46,26 +47,39 @@
               d="M4 6h16M4 12h16m-7 6h7"
             />
           </svg>
+
+          <svg
+            id="close-menu"
+            class="h-6 w-6 hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         </button>
 
         <!-- Menu -->
-        <ul
-          id="menu"
-          class="hidden lg:flex items-center gap-10 bg-white lg:bg-transparent absolute lg:static top-[72px] right-0 w-full lg:w-auto lg:gap-10 px-4 lg:px-0 shadow lg:shadow-none"
-        >
+        <ul id="menu" class="collapsed">
           <li
-            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center lg:text-start my-5 lg:my-0"
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer lg:text-start my-7 lg:my-0"
           >
             <a href="/" class="no-underline"> Home </a>
           </li>
           <li
-            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center lg:text-start my-5 lg:my-0"
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer lg:text-start my-7 lg:my-0"
           >
             <a href="/src/pages/courses.html" class="no-underline"> Courses </a>
           </li>
-          <li class="my-5 lg:my-0">
+          <li class="mt-10 lg:my-0 flex justify-center">
             <button
-              class="font-bold rounded-[40px] py-3 px-6 bg-tertiaryBackground text-white h-12 hover:bg-primaryMain w-full lg:w-auto"
+              class="font-bold rounded-[40px] py-3 px-6 bg-tertiaryBackground text-white h-12 hover:bg-primaryMain lg:w-auto w-full"
             >
               <a href="/src/pages/register.html" class="block w-full h-full"
                 >Registered
@@ -81,12 +95,12 @@
       class="mt-[100px] lg:mt-[130px] lg:px-40 animate__animated animate__fadeIn"
     >
       <!-- Course Filter -->
-      <section class="mb-20 lg:mb-10 px-2.5 lg:px-0">
+      <section class="mb-10 px-2.5 lg:px-0">
         <h3 class="text-h4 md:text-h3 md:text-[40px] mb-10 font-bold">
           All Courses
         </h3>
         <ul
-          class="bg-secondaryBackground text-textPrimary flex flex-wrap p-0.5 text-center h-11 font-bold items-center lg:w-[1147px]"
+          class="bg-secondaryBackground text-textPrimary h-full flex flex-wrap p-0.5 text-center font-bold items-center lg:w-[1147px]"
         >
           <li class="filter-item">
             <a href="/src/pages/courses.html">All</a>

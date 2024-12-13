@@ -33,6 +33,7 @@
           class="block lg:hidden text-textPrimary focus:outline-none"
         >
           <svg
+            id="open-menu"
             class="h-6 w-6"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -46,26 +47,39 @@
               d="M4 6h16M4 12h16m-7 6h7"
             />
           </svg>
+
+          <svg
+            id="close-menu"
+            class="h-6 w-6 hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         </button>
 
         <!-- Menu -->
-        <ul
-          id="menu"
-          class="hidden lg:flex items-center gap-10 bg-white lg:bg-transparent absolute lg:static top-[72px] right-0 w-full lg:w-auto lg:gap-10 px-4 lg:px-0 shadow lg:shadow-none"
-        >
+        <ul id="menu" class="collapsed">
           <li
-            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center lg:text-start my-5 lg:my-0"
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer lg:text-start my-7 lg:my-0"
           >
             <a href="/" class="no-underline"> Home </a>
           </li>
           <li
-            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer text-center lg:text-start my-5 lg:my-0"
+            class="text-textPrimary font-bold hover:text-primaryMain cursor-pointer lg:text-start my-7 lg:my-0"
           >
             <a href="/src/pages/courses.html" class="no-underline"> Courses </a>
           </li>
-          <li class="my-5 lg:my-0">
+          <li class="mt-10 lg:my-0 flex justify-center">
             <button
-              class="font-bold rounded-[40px] py-3 px-6 bg-tertiaryBackground text-white h-12 hover:bg-primaryMain w-full lg:w-auto"
+              class="font-bold rounded-[40px] py-3 px-6 bg-tertiaryBackground text-white h-12 hover:bg-primaryMain lg:w-auto w-full"
             >
               <a href="/src/pages/register.html" class="block w-full h-full"
                 >Registered
@@ -83,70 +97,7 @@
         <div
           class="flex lg:gap-40 items-center justify-center relative w-full lg:p-20 lg:bg-secondaryBackground"
           id="general-info"
-        >
-          <!-- <div
-            class="flex flex-col w-full gap-20 animate__animated animate__fadeInUp animate__delay-1s"
-          >
-            <div class="flex flex-col gap-6 lg:gap-10 lg:p-10">
-              <div class="flex flex-col gap-4">
-                <div class="lg:gap-1 flex flex-col lg:mb-16">
-                  <p class="text-textSecondary text-lg" id="course-type"></p>
-                  <h4
-                    class="text-h2 font-bold text-[64px] leading-[89.6px]"
-                    id="course-name"
-                  ></h4>
-                </div>
-
-                <div
-                  class="flex flex-col lg:flex-row gap-8 lg:gap-14 text-center lg:text-start"
-                >
-                  <div class="flex flex-col gap-4">
-                    <p class="text-textSecondary">Opening day</p>
-                    <h5 class="text-h5 font-bold" id="opening-day"></h5>
-                  </div>
-                  <div class="flex flex-col gap-4">
-                    <p class="text-textSecondary">Time limit</p>
-                    <h5 class="text-h5 font-bold" id="time-limit"></h5>
-                  </div>
-                  <div class="flex flex-col gap-4">
-                    <p class="text-textSecondary">Learning form</p>
-                    <h5 class="text-h5 font-bold" id="learning-form"></h5>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="flex flex-col lg:flex-row gap-6 bg-white justify-between items-center p-6"
-              >
-                <div class="flex items-center gap-2">
-                  <img
-                    src="/src/assets/images/avatar.png"
-                    alt="avatar"
-                    class="w-10 h-10"
-                    id="teacher-avatar"
-                  />
-                  <p class="text-textSecondary" id="teacher-name"></p>
-                </div>
-                <span
-                  class="text-textPrimary font-bold text-xl"
-                  id="price"
-                ></span>
-              </div>
-
-              <button
-                class="bg-tertiaryBackground text-white rounded-[40px] py-4 px-10 font-bold hover:bg-primaryMain animate__animated animate__fadeInUp animate__delay-2s transition-transform duration-300 ease-in-out lg:w-[233px] w-full"
-              >
-                Register
-              </button>
-            </div>
-          </div>
-          <img
-            class="animate-on-scroll hidden lg:block"
-            data-animation="zoomIn"
-            alt="React"
-            id="course-thumbnail"
-          /> -->
-        </div>
+        ></div>
       </section>
 
       <!-- Introduce -->
@@ -265,7 +216,7 @@
 
       <!-- Lectures -->
       <section
-        class="lg:px-40 mb-24 px-2.5 animate-on-scroll"
+        class="lg:px-40 mb-14 lg:mb-24 px-2.5 animate-on-scroll"
         data-animation="fadeIn"
       >
         <h4 class="text-h4 font-medium mt-20 mb-16">Lectures</h4>
@@ -295,7 +246,7 @@
 
       <!-- Special Value -->
       <section
-        class="px-2.5 lg:px-40 flex flex-col lg:flex-row bg-secondaryBackground relative lg:h-[896px] pt-24 animate-on-scroll"
+        class="px-2.5 lg:px-40 flex flex-col lg:flex-row bg-secondaryBackground relative lg:h-[896px] pt-14 lg:pt-24 animate-on-scroll"
         data-animation="fadeIn"
       >
         <div class="flex-1">
@@ -313,7 +264,7 @@
           />
         </div>
         <ul
-          class="flex-1 flex gap-10 flex-col animate-on-scroll mt-8 mb-32"
+          class="flex-1 flex gap-10 flex-col animate-on-scroll mt-8 mb-16"
           data-animation="fadeIn"
         >
           <li class="special-value-item">
@@ -339,7 +290,7 @@
               learners, will be successful on the career path of each of us.
             </p>
           </li>
-          <li class="speical-value-item">
+          <li class="special-value-item">
             <h4>Various forms of learning</h4>
             <p>
               Study offline or online with offline through google meet, as well
@@ -352,7 +303,7 @@
 
       <!-- FAQ -->
       <section
-        class="flex flex-col lg:flex-row lg:px-40 px-2.5 lg:h-[872px] py-40 justify-between animate-on-scroll"
+        class="flex flex-col lg:flex-row lg:px-40 px-2.5 lg:h-[872px] py-20 lg:py-32 justify-between animate-on-scroll"
         data-animation="fadeIn"
       >
         <img
