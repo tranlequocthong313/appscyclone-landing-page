@@ -158,7 +158,7 @@
   /* ============ Courses ============ */
   /* Filter */
   .filter-item {
-    @apply px-4 py-2.5 flex-1 hover:opacity-80 hover:bg-tertiaryBackground hover:text-white;
+    @apply px-4 py-2.5 flex-1 hover:opacity-90 hover:bg-tertiaryBackground hover:text-white cursor-pointer;
   }
 
   .filter-item > a {
@@ -167,6 +167,15 @@
 
   .filter-item--active {
     @apply text-white bg-tertiaryBackground;
+  }
+
+  /* Pagination */
+  .pagination-item {
+    @apply w-10 h-10 text-center leading-10 hover:bg-primaryMain hover:text-white cursor-pointer bg-secondaryBackground text-textPrimary;
+  }
+
+  .pagination-item--active {
+    @apply bg-primaryMain text-white;
   }
 
   /* ============ Register ============ */

@@ -14,26 +14,34 @@ const paginationList = document.querySelector("#pagination-list")!
 const noDataFoundImage = document.querySelector("#no-data-found-img")!
 
 
-// Handle Course Filter
+// Handle Courses, Filter and Pagination Section
 document.addEventListener("DOMContentLoaded", () => {
-  const type = (new URLSearchParams(window.location.search)).get("type") || "All"
+  let set = false
   for (const filterItem of filterItems) {
-    if (filterItem.innerHTML.includes(type)) {
-      filterItem.classList.add("filter-item--active")
-    } else {
-      filterItem.classList.remove("filter-item--active")
+    if (!set) {
+      filterItem
+      filterItem.classList.add('filter-item--active')
+      set = true
+      handleCourses()
     }
+    filterItem.addEventListener('click', async () => {
+      document.querySelector('.filter-item--active')!.classList.remove('filter-item--active')
+      filterItem.classList.add('filter-item--active')
+      await handleCourses()
+    })
   }
 })
 
-
-// Handle Courses and Pagination Section
-document.addEventListener("DOMContentLoaded", async () => {
+async function handleCourses(page: number = 1) {
   renderSkeletonCourses()
-  const { data: courses, total = 0 } = await fetchCourses()
+  const { data: courses, total = 0 } = await fetchCourses(page)
   if (courses.length > 0) {
+    courseList.classList.remove('hidden')
+    noDataFoundImage.classList.add('hidden')
+    noDataFoundImage.classList.remove('flex')
+    paginationSection.classList.remove('hidden')
     renderCourses(courses)
-    totalItem.innerHTML += total
+    totalItem.innerHTML = String(total)
     renderPagination(Math.ceil(total / DEFAULT_LIMIT))
   } else {
     courseList.classList.add('hidden')
@@ -41,22 +49,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     noDataFoundImage.classList.add('flex')
     paginationSection.classList.add('hidden')
   }
-})
+}
 
 function renderPagination(totalPages: number, maxVisiblePages: number = 6) {
-  const query = new URLSearchParams(window.location.search)
-  const currentPage = parseInt(query.get("page") || String(DEFAULT_PAGE))
+  const currentPage = parseInt(paginationList.querySelector('.pagination-item--active')?.getAttribute('data-page') || String(DEFAULT_PAGE))
 
-  paginationList.innerHTML += `
-    <li
-      class="bg-secondaryBackground w-10 h-10 flex items-center justify-center ${currentPage === 1 ? "opacity-50 pointer-events-none" : ""
-    }"
-    >
-      <a class="flex items-center justify-center w-full h-full hover:bg-primaryMain" href="?page=${currentPage - 1}">
+  paginationList.innerHTML = ''
+
+  const prev = document.createElement('li')
+  if (currentPage === 1) {
+    prev.classList.add("opacity-50", "pointer-events-none", "hover:bg-primaryMain")
+  }
+  prev.classList.add('bg-secondaryBackground', 'w-10', 'h-10', 'flex', 'items-center', 'justify-center', 'cursor-pointer')
+  prev.innerHTML = `
         <img src="/src/assets/icons/arrow-left-back.png" alt="arrow left" />
-      </a>
-    </li>
   `
+  prev.addEventListener('click', () => {
+    if (currentPage > 1) {
+      const el = paginationList.querySelector('.pagination-item--active')
+      el?.classList.remove('pagination-item--active')
+      el?.previousElementSibling?.classList.add('pagination-item--active')
+      handleCourses(currentPage - 1)
+    }
+  })
+  paginationList.appendChild(prev)
 
   const pages: (number | string)[] = []
 
@@ -94,36 +110,51 @@ function renderPagination(totalPages: number, maxVisiblePages: number = 6) {
           </li>
       `
     } else {
-      paginationList.innerHTML += `
-        <li
-          class="${page === currentPage
-          ? "bg-primaryMain text-white"
-          : "bg-secondaryBackground text-textPrimary"
-        } w-10 h-10 text-center leading-10 hover:bg-primaryMain hover:text-white"
-        >
-          <a class="block w-full h-full" href="?page=${page}" class="no-underline">${page}</a>
-        </li>
-      `
+      const li = document.createElement('li')
+      if (page === currentPage) {
+        li.classList.add('pagination-item--active')
+      }
+      li.classList.add('pagination-item')
+      li.setAttribute('data-page', String(page))
+      li.addEventListener('click', () => {
+        document.querySelector('.pagination-item--active')?.classList.remove('pagination-item--active')
+        li.classList.add('pagination-item--active')
+        const page = li.getAttribute('data-page')
+        if (page) {
+          handleCourses(Number(page))
+        }
+      })
+      li.textContent = String(page)
+      paginationList.appendChild(li)
     }
   }
 
-  paginationList.innerHTML += `
-    <li
-      class="bg-secondaryBackground w-10 h-10 flex items-center justify-center ${currentPage === totalPages ? "opacity-50 pointer-events-none" : ""
-    }"
-    >
-      <a class="flex items-center justify-center w-full h-full hover:bg-primaryMain" href="?page=${currentPage + 1}">
+  const next = document.createElement('li')
+  if (currentPage === totalPages) {
+    next.classList.add("opacity-50", "pointer-events-none", "hover:bg-primaryMain")
+  }
+  next.classList.add('bg-secondaryBackground', 'w-10', 'h-10', 'flex', 'items-center', 'justify-center', 'cursor-pointer')
+  next.innerHTML = `
         <img src="/src/assets/icons/arrow-right.png" alt="arrow right" />
-      </a>
-    </li>
   `
+  next.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      const el = paginationList.querySelector('.pagination-item--active')
+      el?.classList.remove('pagination-item--active')
+      el?.nextElementSibling?.classList.add('pagination-item--active')
+      handleCourses(currentPage + 1)
+    }
+  })
+  paginationList.appendChild(next)
 }
 
-async function fetchCourses() {
+async function fetchCourses(page: number = DEFAULT_PAGE) {
   try {
     const query = new URLSearchParams(window.location.search)
-    const type = query.get("type") || ""
-    const page = parseInt(query.get("page") || DEFAULT_PAGE.toString(), 10)
+    let type = document.querySelector('.filter-item--active')?.getAttribute('data-type')
+    if (type === 'All') {
+      type = ''
+    }
     const perPage = parseInt(query.get("limit") || DEFAULT_LIMIT.toString(), 10)
 
     const response = await http.get<Course[]>(API_ENDPOINTS.courses)
@@ -148,6 +179,7 @@ async function fetchCourses() {
 }
 
 function renderSkeletonCourses() {
+  courseList.innerHTML = ''
   for (let i = 0; i < 9; i++) {
     const element = `<li
             class="relative animate-on-scroll cursor-pointer"
